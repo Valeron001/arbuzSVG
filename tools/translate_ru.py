@@ -1,10 +1,32 @@
+"""Одноразовая миграция: сборка русской версии из английской.
+
+С 08.11.2026 index.html (русская версия) — основной и единственный
+редактируемый файл проекта. Английская версия (index-en.html) заморожена.
+Поэтому скрипт по умолчанию НЕ перезаписывает index.html: для запуска
+нужен явный ключ --force.
+
+    python tools/translate_ru.py --force
+
+Скрипт читает index-en.html, применяет словарь переводов и локализацию
+чисел и перезаписывает index.html. В конце печатает missing N — число
+непереведённых строк; если N > 0, добавьте их в словарь D.
+"""
+
 import os
 import re
+import sys
 from bs4 import BeautifulSoup
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(BASE, 'index-en.html')
 OUT = os.path.join(BASE, 'index.html')
+
+if os.path.exists(OUT) and '--force' not in sys.argv:
+    sys.exit(
+        'index.html уже существует и ведётся вручную (основная версия). '
+        'Скрипт перезапишет его. Для принудительной пересборки: '
+        'python tools/translate_ru.py --force'
+    )
 
 D = {
 # --- head / chrome ---
@@ -99,7 +121,7 @@ D = {
 "Port link": "Порт",
 "Northern Sea Route": "СМП",
 "N": "С",
-"Schematic regional diagram, not a cartographic map. Population: Sovetskaya Gavan city 23,232 + Vaninsky District 33,201 (2025).": "Схематическая региональная диаграмма, не картографическая карта. Население: город Советская Гавань 23 232 + Ванинский район 33 201 (2025).",
+"Baikal-Amur Mainline from the Pacific gateway. Sovetskaya Gavan is the eastern terminus of the BAM; the Vanino deep-water port is 10 km away. Map source: IZ.RU. Population: Sovetskaya Gavan city 23,232 + Vaninsky District 33,201 (2025).": "Байкало-Амурская магистраль — от тихоокеанских ворот. Советская Гавань — восточная конечная станция БАМ; глубоководный порт Ванино в 10 км. Источник карты: IZ.RU. Население: город Советская Гавань 23 232 + Ванинский район 33 201 (2025).",
 "Eastern terminus": "Восточная конечная станция",
 "To Vanino deep-water port": "До глубоководного порта Ванино",
 "Catchment population": "Население зоны охвата",
@@ -508,6 +530,7 @@ D = {
 
 ATTR = {
 "Language / Язык": "Язык / Language",
+"Baikal-Amur Mainline map: Sovetskaya Gavan as the eastern terminus of the BAM, with the Vanino deep-water port and the Trans-Siberian line to the west. Map source: IZ.RU.": "Карта Байкало-Амурской магистрали: Советская Гавань — восточная конечная станция БАМ, глубоководный порт Ванино и Транссибирская линия на западе. Источник карты: IZ.RU.",
 "Primary": "Основная навигация",
 "ARBUZ, Sovetskaya Gavan — back to top": "АРБУЗ, Советская Гавань — наверх",
 "Key metrics": "Ключевые показатели",

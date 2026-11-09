@@ -1,0 +1,4 @@
+_qa/
+node_modules/
+*.tmp
+~$*

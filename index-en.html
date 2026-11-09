@@ -164,9 +164,10 @@ b,strong{font-weight:800}
 .snapshot b{display:block;font-size:18px;line-height:1.1;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .snapshot span{display:block;font-size:11px;color:var(--muted);margin-top:3px;line-height:1.3}
 .mapcard{background:#fff;border:1px solid var(--grey-line);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
-.mapcard svg{width:100%;height:auto;border-radius:16px}
+    .mapcard svg{width:100%;height:auto;border-radius:16px}
+    .mapcard img{width:100%;height:auto;border-radius:16px;display:block}
 figcaption{font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:10px}
-.reason-grid{display:grid;gap:12px}
+    .reason-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .reason{position:relative;padding:17px 18px 16px 22px;border:1px solid var(--grey-line);border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(20,38,28,.03)}
 .reason::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:4px;border-radius:0 4px 4px 0;background:var(--lime)}
 .reason h3{font-size:15.5px;color:var(--green);margin:0 0 4px}
@@ -412,6 +413,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .metric-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
   .metric:last-child{grid-column:1 / -1}
   .kpis,.rent-strip{grid-template-columns:1fr}
+  .reason-grid{grid-template-columns:1fr}
   .eng-facts{grid-template-columns:1fr}
   .hero__actions .btn{flex:1 1 auto}
   .lot__price{align-items:flex-start}
@@ -713,67 +715,24 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 
   <section class="sec sec--mint" id="summary">
     <div class="shell">
-      <div class="split">
-        <div class="summary-left">
-        <figure class="mapcard reveal">
-          <svg viewBox="0 0 760 440" role="img" aria-labelledby="v5title v5desc">
-            <title id="v5title">Schematic regional map of Sovetskaya Gavan</title>
-            <desc id="v5desc">Sovetskaya Gavan as the eastern terminus of the Baikal-Amur Mainline, with the Vanino deep-water port 10 km away and the Northern Sea Route running north.</desc>
-            <defs>
-              <marker id="arrowCyan5" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 9 4.5 0 9z" fill="#19DAEC"/></marker>
-              <path id="bamPath5" d="M36 330C150 314 262 276 402 286S534 272 578 254"/>
-            </defs>
-            <rect width="760" height="440" fill="#E8E1D4"/>
-            <path d="M470 0h290v440H444c24-52 20-104 34-156 10-36-18-70-8-120 8-38 8-86 0-164z" fill="#C4E9FA"/>
-            <path d="M480 40c22 18 20 48 8 68M520 120c20 16 18 44 8 62M470 210c22 18 20 48 8 68M520 300c20 16 18 44 8 62" fill="none" stroke="#90CAF5" stroke-width="2" opacity=".6"/>
-            <path d="M0 380c90-12 170 14 260 4s150-32 240-16v72H0z" fill="#D9EAD3" opacity=".65"/>
-            <use href="#bamPath5" fill="none" stroke="#36761D" stroke-width="6" stroke-linecap="round"/>
-            <text fill="#36761D" font-size="11" font-weight="800" letter-spacing="1.4"><textPath href="#bamPath5" startOffset="17%">BAIKAL–AMUR MAINLINE</textPath></text>
-            <path d="M578 254 664 202" fill="none" stroke="#FED966" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="664" cy="202" r="8" fill="#FED966" stroke="#fff" stroke-width="2"/>
-            <path d="M664 188v8M656 196h16M660 202l8 8M668 202l-8 8" fill="none" stroke="#8a6b00" stroke-width="1.6"/>
-            <path d="M578 246V58" fill="none" stroke="#19DAEC" stroke-width="3.5" stroke-dasharray="7 6" marker-end="url(#arrowCyan5)"/>
-            <text x="592" y="128" fill="#0b6b74" font-size="11" font-weight="800" letter-spacing="1.2" transform="rotate(-90 592 128)" text-anchor="middle">NORTHERN SEA ROUTE</text>
-            <circle cx="578" cy="254" r="13" fill="#fff"/>
-            <circle cx="578" cy="254" r="10" fill="#36761D"/>
-            <circle cx="578" cy="254" r="4" fill="#8FD331"/>
-            <text x="598" y="248" fill="#14261C" font-size="12" font-weight="800" letter-spacing=".6">SOVETSKAYA GAVAN</text>
-            <text x="598" y="264" fill="#395F4F" font-size="10" font-weight="700">TERMINUS OF THE BAM</text>
-            <text x="664" y="184" text-anchor="middle" fill="#6b5300" font-size="10" font-weight="800">VANINO DEEP-WATER PORT</text>
-            <text x="664" y="196" text-anchor="middle" fill="#6b5300" font-size="9" font-weight="700">10 km</text>
-            <g>
-              <rect x="28" y="32" width="322" height="94" rx="16" fill="#fff" stroke="#36761D" stroke-width="2"/>
-              <text x="46" y="60" fill="#36761D" font-size="10.5" font-weight="800" letter-spacing="1.3">ONLY LARGE SHOPPING CENTRE</text>
-              <text x="46" y="78" fill="#14261C" font-size="14" font-weight="800">Serving the two districts</text>
-              <text x="46" y="104" fill="#395F4F" font-size="12" font-weight="700">56,433 people · 4.5% vacancy</text>
-            </g>
-            <g font-size="10" font-weight="700" fill="#41564b">
-              <rect x="28" y="382" width="18" height="4" rx="2" fill="#36761D"/>
-              <text x="54" y="389">BAM</text>
-              <rect x="102" y="382" width="18" height="4" rx="2" fill="#FED966"/>
-              <text x="128" y="389">Port link</text>
-              <rect x="196" y="382" width="18" height="4" rx="2" fill="#19DAEC"/>
-              <text x="222" y="389">Northern Sea Route</text>
-            </g>
-            <g transform="translate(716,36)">
-              <path d="M0 22 6 0l6 22-6-5z" fill="#14261C"/>
-              <text x="6" y="-5" text-anchor="middle" font-size="9" font-weight="800" fill="#14261C">N</text>
-            </g>
-          </svg>
-          <figcaption>Schematic regional diagram, not a cartographic map. Population: Sovetskaya Gavan city 23,232 + Vaninsky District 33,201 (2025).</figcaption>
-        </figure>
-        <div class="snapshot reveal">
-          <div><b>BAM</b><span>Eastern terminus</span></div>
-          <div><b>10 km</b><span>To Vanino deep-water port</span></div>
-          <div><b>56,433</b><span>Catchment population</span></div>
-        </div>
-        </div>
+      <div class="sec-head reveal">
+        <div class="eyebrow">Executive summary</div>
+        <h2>Why this asset, why now</h2>
+        <p class="lede" style="margin-top:14px">Four reasons a sceptical buyer can underwrite, each with the figure that supports it.</p>
+      </div>
 
-        <div class="reveal">
-          <div class="eyebrow">Executive summary</div>
-          <h2>Why this asset, why now</h2>
-          <p class="lede" style="margin-top:14px">Four reasons a sceptical buyer can underwrite, each with the figure that supports it.</p>
-          <div class="reason-grid" style="margin-top:20px">
+      <figure class="mapcard reveal">
+        <img src="assets/bam-sovetskaya-gavan.jpg" alt="Baikal-Amur Mainline map: Sovetskaya Gavan as the eastern terminus of the BAM, with the Vanino deep-water port and the Trans-Siberian line to the west. Map source: IZ.RU.">
+        <figcaption>Baikal-Amur Mainline from the Pacific gateway. Sovetskaya Gavan is the eastern terminus of the BAM; the Vanino deep-water port is 10 km away. Map source: IZ.RU. Population: Sovetskaya Gavan city 23,232 + Vaninsky District 33,201 (2025).</figcaption>
+      </figure>
+
+      <div class="snapshot reveal" style="margin-top:14px">
+        <div><b>BAM</b><span>Eastern terminus</span></div>
+        <div><b>10 km</b><span>To Vanino deep-water port</span></div>
+        <div><b>56,433</b><span>Catchment population</span></div>
+      </div>
+
+      <div class="reason-grid reveal" style="margin-top:20px">
             <article class="reason">
               <h3>Inflation hedge</h3>
               <p>Hard walls and freehold land revalue with inflation; fixed deposit rates do not.</p>
@@ -794,8 +753,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
               <p>Priced 30.4% below the 2025 independent appraisal — a measurable entry discount.</p>
               <b>RUB 160,594,091 saving</b>
             </article>
-          </div>
-        </div>
       </div>
     </div>
   </section>
