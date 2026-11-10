@@ -324,6 +324,10 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 .upside-key__title{margin:0 0 14px;font-size:clamp(26px,3.2vw,42px);line-height:1.1;letter-spacing:-.025em;font-weight:800;color:#fff}
 .upside-key__text{margin:0;max-width:78ch;font-size:clamp(15px,1.45vw,20px);line-height:1.5;color:rgba(255,255,255,.9)}
 .upside-key__text b{color:var(--lime)}
+.gab-banner{margin-top:18px;position:relative;overflow:hidden;border-radius:26px;border:1px solid #0F1D16;background:linear-gradient(135deg,#14261C 0%,#2F6B45 58%,#36761D 100%);box-shadow:0 22px 60px rgba(6,45,34,.28);padding:clamp(24px,3.2vw,42px)}
+.gab-banner::after{content:"ГАБ";position:absolute;right:16px;bottom:-.16em;font-size:clamp(60px,7.5vw,124px);font-weight:800;letter-spacing:-.04em;line-height:1;color:rgba(255,255,255,.06);pointer-events:none}
+.gab-banner__title{position:relative;margin:0 0 12px;max-width:34ch;font-size:clamp(21px,2.5vw,34px);line-height:1.15;letter-spacing:-.02em;font-weight:800;color:#fff}
+.gab-banner__text{position:relative;margin:0;max-width:70ch;font-size:clamp(15px,1.6vw,21px);line-height:1.45;font-weight:600;color:var(--lime)}
 
 .law-banner{position:relative;overflow:hidden;border-radius:26px;border:1px solid var(--grey-line);background:linear-gradient(135deg,#FFFFFF 0%,#EFF8FD 55%,#DCF1FA 100%);box-shadow:0 18px 54px rgba(20,38,28,.10);padding:clamp(26px,3.4vw,48px)}
 .law-banner::after{content:"127-ФЗ";position:absolute;right:-10px;bottom:-.24em;font-size:clamp(80px,11vw,170px);font-weight:800;letter-spacing:-.05em;line-height:1;color:rgba(54,118,29,.08);pointer-events:none}
@@ -437,6 +441,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .eng-banner ul{grid-template-columns:1fr}
   .upside-key::before{position:static;display:inline-block;border-radius:14px;margin-bottom:12px}
   .law-banner::after{display:none}
+  .gab-banner::after{display:none}
   .eng-photos{grid-template-columns:1fr}
   .photogallery__row{grid-template-columns:1fr}
   .hero__actions .btn{flex:1 1 auto}
@@ -482,6 +487,10 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .upside-key__title{color:var(--green) !important}
   .upside-key__text{color:var(--ink) !important}
   .upside-key__text b{color:var(--green) !important}
+  .gab-banner{background:#F4FAFD !important;border-color:#b9c4be !important;box-shadow:none !important}
+  .gab-banner::after{color:rgba(54,118,29,.12) !important}
+  .gab-banner__title{color:var(--green) !important}
+  .gab-banner__text{color:var(--ink) !important}
   .flow__join svg{display:none}
   .contact{background:#fff !important;color:var(--ink) !important;padding:18px 0 !important}
   .contact::before{display:none}
@@ -688,7 +697,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="shell">
 <div class="sec-head reveal">
 <h2>А теперь только цифры.</h2>
-<p>Два операционных сценария. Всего три основных шага для оптимизации: Первый -это использование склада 1500 кв. м. Второй -организация офиса на четвертом этаже. Третий шаг- повышение арендной ставки на 8-15 %. Все цифры взяты из независимой оценки 2025 года.</p>
+<p>Три  шага для оптимизации: Первый - использование склада 1500 кв. м.<br> Второй -организация офиса на четвертом этаже. <br> Третий шаг- повышение арендной ставки на 8-15 %. </p>
 </div>
 <div class="scenarios">
 <article class="scenario reveal">
@@ -696,13 +705,13 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div><h3>Текущий сценарий</h3></div>
 </div>
 <dl>
-<dt>Выручка</dt><dd>70 800 000 ₽ / год</dd>
-<dt>NOI</dt><dd>33 168 000 ₽ / год</dd>
-<dt>Маржа NOI</dt><dd>33%</dd>
-<dt>Ставка капитализации</dt><dd>6,27%</dd>
+<dt>Выручка</dt><dd>70,8 млн ₽ / год</dd>
+<dt>NOI</dt><dd>33,2 млн ₽ / год</dd>
+<dt>Маржа NOI</dt><dd>46,8%</dd>
+<dt>Ставка капитализации</dt><dd>9,0%</dd>
 <dt>Окупаемость</dt><dd>11,1 лет</dd>
-<dt>GRM</dt><dd>5,20</dd>
-<dt>Валовая доходность</dt><dd>19,22%</dd>
+<dt>GRM</dt><dd>5,2</dd>
+<dt>Валовая доходность</dt><dd>19,2%</dd>
 </dl>
 </article>
 <article class="scenario scenario--opt reveal">
@@ -710,25 +719,28 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div><h3>Сценарий оптимизации</h3></div>
 </div>
 <dl>
-<dt>Выручка</dt><dd>75 600 000 ₽ / год</dd>
-<dt>NOI</dt><dd>37 560 000 ₽ / год</dd>
-<dt>Маржа NOI</dt><dd>36%</dd>
-<dt>Ставка капитализации</dt><dd>7,46%</dd>
-<dt>Окупаемость</dt><dd>10 лет</dd>
-<dt>GRM</dt><dd>4,87</dd>
-<dt>Рост NOI</dt><dd>+19,1%</dd>
-<dt>Рост выручки</dt><dd>+6,8%</dd>
+<dt>Выручка</dt><dd>80,0 млн ₽ / год</dd>
+<dt>NOI</dt><dd>37,6 млн ₽ / год</dd>
+<dt>Маржа NOI</dt><dd>46,9%</dd>
+<dt>Ставка капитализации</dt><dd>10,2%</dd>
+<dt>Окупаемость</dt><dd>9 лет</dd>
+<dt>GRM</dt><dd>4,6</dd>
+<dt>Рост NOI</dt><dd>+13,2%</dd>
+<dt>Рост выручки</dt><dd>+13,0%</dd>
 </dl>
 </article>
 </div>
 <div class="kpis">
-<div class="kpi reveal"><span>Целевой NOI</span><b>37, 5 млн ₽</b><small>в год</small></div>
-<div class="kpi reveal"><span>Целевая ставка</span><b>7,46%</b></div>
-<div class="kpi reveal"><span>GRM</span><b>4,9</b></div>
-<div class="kpi reveal"><span>Окупаемость</span><b>10 лет</b></div>
-<div class="kpi reveal"><span>Операционные расходы</span><b>27.0 млн ₽ </b><small>в год</small></div>
+<div class="kpi reveal"><span>Целевой NOI</span><b>37,6 млн ₽</b><small>в год</small></div>
+<div class="kpi reveal"><span>Целевая ставка</span><b>10,2%</b></div>
+<div class="kpi reveal"><span>GRM</span><b>4,6</b></div>
+<div class="kpi reveal"><span>Окупаемость</span><b>9 лет</b></div>
+<div class="kpi reveal"><span>Операционные расходы</span><b>27,0 млн ₽ </b><small>в год</small></div>
 </div>
-<p>ВОЗНАГРАЖДЕНИЕ агентам — 4 млн ₽. Выплата по факту закрытия сделки. Идентиф. номер на МЭТС: 204308-МЭТС-1</p>
+<div class="gab-banner reveal">
+<p class="gab-banner__title">ГАБ — дает вам доход и фундаментальную защиту капитала!</p>
+<p class="gab-banner__text">Потеря капитала может произойти в акциях, облигациях и вкладах.</p>
+</div>
 </section>
 <section class="sec sec--white" id="discount">
 <div class="shell">
