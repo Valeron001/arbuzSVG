@@ -25,14 +25,14 @@
   --gold:#FED966;
   --peach:#FCE5CD;
   --cream:#E8E1D4;
-  --grey-bg:#EEEEEE;
+  --grey-bg:#E7F0F5;
   --grey-line:#CBD5CC;
   --red:#C62828;
-  --muted:#6B7A72;
+  --muted:#14261C;
   --white:#FFFFFF;
   --shell:1120px;
   --gutter:clamp(18px,2.6vw,40px);
-  --rail:clamp(130px,13vw,200px);
+  --rail:0px;
   --radius:24px;
   --radius-sm:16px;
   --shadow:0 1px 2px rgba(20,38,28,.05),0 8px 24px rgba(20,38,28,.05);
@@ -42,7 +42,7 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:#fff;color:var(--ink);
+  margin:0;background:#F4FAFD;color:var(--ink);
   font-family:Manrope,"Segoe UI",system-ui,-apple-system,sans-serif;
   font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;overflow-x:hidden;
@@ -70,9 +70,9 @@ b,strong{font-weight:800}
 
 .shell{width:100%;max-width:var(--shell);margin:0 auto;padding-left:var(--gutter);padding-right:calc(var(--gutter) + var(--rail))}
 .sec{position:relative;padding:clamp(64px,7vw,104px) 0}
-.sec--mint{background:linear-gradient(180deg,var(--mint) 0%,#F8FDF9 100%)}
+.sec--mint{background:linear-gradient(180deg,#E7F6FB 0%,#F9FCFE 100%)}
 .sec--grey{background:var(--grey-bg)}
-.sec--white{background:#fff}
+.sec--white{background:#FAFCFE}
 .sec--upside{background:linear-gradient(135deg,#19DAEC 0%,#57E4F1 55%,#C4E9FA 100%);color:#0b2b20}
 .sec--deck{background:linear-gradient(160deg,#2F4F41 0%,#395F4F 44%,#14261C 100%);color:#fff}
 .sec--deck h2,.sec--deck h3{color:#fff}
@@ -113,36 +113,36 @@ b,strong{font-weight:800}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none;line-height:1}
 .brand svg{width:27px;height:27px;flex:none}
 .brand__txt{display:flex;flex-direction:column;gap:2px}
-.brand__name{font-size:12.5px;font-weight:800;letter-spacing:.13em}
-.brand__sub{font-size:9px;letter-spacing:.14em;color:var(--muted);font-weight:700}
+.brand__name{font-size:15.5px;font-weight:800;letter-spacing:.13em}
+.brand__sub{font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:700}
 .nav{display:flex;align-items:center;gap:2px;margin-left:auto}
-.nav a{font-size:12.5px;font-weight:700;text-decoration:none;color:#3F5349;padding:9px 9px;border-radius:99px;transition:background .2s,color .2s;white-space:nowrap}
+.nav a{font-size:15.5px;font-weight:700;text-decoration:none;color:#3F5349;padding:9px 9px;border-radius:99px;transition:background .2s,color .2s;white-space:nowrap}
 .nav a:hover{background:var(--mint);color:var(--green)}
 .topbar__cta{margin-left:6px;flex:none}
-.lang-switch{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:800;letter-spacing:.08em;flex:none;color:var(--grey-line)}
+.lang-switch{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:800;letter-spacing:.08em;flex:none;color:var(--muted)}
 .lang-switch a{text-decoration:none;color:var(--muted);padding:8px 2px;line-height:1;transition:color .2s}
 .lang-switch a:hover{color:var(--green)}
 .lang-switch a.is-active{color:var(--green)}
-.lang-switch .sep{color:var(--grey-line)}
+.lang-switch .sep{color:var(--muted)}
 
-.hero{position:relative;padding:calc(64px + clamp(34px,4.4vw,64px)) 0 clamp(34px,4vw,48px);background:radial-gradient(1100px 620px at 88% -6%,rgba(144,202,245,.58),transparent 62%),linear-gradient(180deg,#DFF3FC 0%,#EEF9F3 44%,#fff 100%);overflow:hidden}
+.hero{position:relative;padding:calc(64px + clamp(34px,4.4vw,64px)) 0 clamp(34px,4vw,48px);background:radial-gradient(1100px 620px at 88% -6%,rgba(144,202,245,.58),transparent 62%),linear-gradient(180deg,#DFF3FC 0%,#E9F7FC 44%,#FAFCFE 100%);overflow:hidden}
 .hero .shell{position:relative;z-index:1}
-.hero__grid{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:clamp(26px,3.4vw,44px);align-items:center}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,3.4vw,44px);align-items:center}
 .hero h1{margin:0 0 15px}
 .mark{color:var(--green);position:relative;white-space:nowrap}
 .mark::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.02em;height:.18em;background:var(--lime);opacity:.34;border-radius:99px;z-index:-1}
 .hero .lede{margin-bottom:18px;font-size:clamp(16px,1.3vw,18px)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .lot{margin-top:19px;padding:17px 20px 18px;border-radius:20px;background:linear-gradient(145deg,rgba(255,248,231,.97),rgba(242,249,236,.97));border:1px solid #E3D5AC;box-shadow:0 12px 32px rgba(20,38,28,.07)}
-.lot__cap{font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--green)}
+.lot__cap{font-size:12.5px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--green)}
 .lot__list{margin-top:8px;display:grid;gap:5px}
-.lot__list li{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;padding-bottom:5px;border-bottom:1px dashed rgba(20,38,28,.14)}
+.lot__list li{display:flex;justify-content:space-between;gap:14px;font-size:17.5px;padding-bottom:5px;border-bottom:1px dashed rgba(20,38,28,.14)}
 .lot__list li:last-child{border-bottom:0;padding-bottom:0}
 .lot__list b{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
 .lot__price{margin-top:11px;padding-top:11px;border-top:1px solid rgba(20,38,28,.14);display:flex;align-items:baseline;justify-content:space-between;gap:15px;flex-wrap:wrap}
 .lot__price small{display:block;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:2px}
 .lot__price b{font-size:clamp(22px,2.3vw,28px);line-height:1.1;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.deadline{font-size:13px;font-weight:800;color:var(--red)}
+.deadline{font-size:19px;font-weight:800;color:var(--red)}
 .deadline span{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:2px}
 
 .artframe{position:relative;background:#fff;border:1px solid var(--grey-line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:12px;transform:perspective(1200px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .28s var(--ease);will-change:transform}
@@ -151,9 +151,11 @@ b,strong{font-weight:800}
     .hero__art{position:relative}
     .photogallery{display:grid;gap:12px;margin-top:16px}
     .photogallery__row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .photogallery__row .photoframe img{aspect-ratio:4/3;object-fit:cover}
     .photoframe{margin:0;background:#fff;border:1px solid var(--grey-line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
     .photoframe img{display:block;width:100%;height:auto}
     .photoframe figcaption{font-size:12px;color:var(--muted);padding:9px 12px 11px;line-height:1.45}
+    .photoframe--hero img{aspect-ratio:16/9;object-fit:cover}
 .hero__art::before{content:"";position:absolute;inset:10% -7% -7% 19%;background:radial-gradient(ellipse at 60% 60%,rgba(54,118,29,.14),transparent 70%);filter:blur(18px);z-index:-1}
 .hero__badge{position:absolute;left:-14px;bottom:34px;background:#fff;border:1px solid var(--grey-line);border-radius:14px;box-shadow:var(--shadow-lg);padding:10px 14px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:8px}
 .hero__badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(143,211,49,.2)}
@@ -195,13 +197,7 @@ figcaption{font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:10px}
 .scenario dd{margin:0;font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right;border-bottom:1px dashed rgba(20,38,28,.1);padding-bottom:9px;white-space:nowrap}
 .scenario dt:last-of-type,.scenario dd:last-of-type{border-bottom:0;padding-bottom:0}
 
-.finding{margin-top:22px;padding:clamp(24px,3vw,34px);background:var(--yellow);border:1px solid #E8C96A;border-radius:var(--radius);box-shadow:0 12px 30px rgba(160,120,0,.08)}
-.finding h3{font-size:clamp(19px,2vw,24px);margin-bottom:10px}
-.finding p{font-size:15px;line-height:1.55;max-width:80ch}
-.finding strong{background:rgba(255,255,255,.55);padding:0 4px;border-radius:3px}
-.finding .finding__check{margin-top:14px;padding-top:13px;border-top:1px solid rgba(107,83,0,.18);font-size:13.5px;font-weight:700;color:#4b3a00}
-
-.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:22px}
 .kpi{background:#fff;border:1px solid var(--grey-line);border-radius:16px;padding:16px 17px;box-shadow:var(--shadow)}
 .kpi span{display:block;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:5px}
   .kpi b{display:block;font-size:clamp(20px,1.9vw,25px);line-height:1.1;color:var(--green);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
@@ -214,7 +210,7 @@ figcaption{font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:10px}
 .chart-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;padding-bottom:4px}
 .chart-scroll svg{min-width:660px;width:100%;height:auto}
 .chart-scroll--wide svg{min-width:720px}
-.legend{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:10px;font-size:12px;color:#41564b}
+.legend{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:10px;font-size:12px;color:#14261C}
 .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .legend i.line{height:3px;border-radius:2px;vertical-align:2px}
 .chart-caption{font-size:12.5px;line-height:1.55;color:var(--muted);margin-top:12px;padding-top:12px;border-top:1px solid var(--grey-line)}
@@ -243,7 +239,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 .diagram{width:100%;height:auto;display:block}
 .diagram text{font-family:Manrope,"Segoe UI",system-ui,sans-serif}
 .dg-t{font-size:11px;font-weight:600;fill:#14261C}
-.dg-ts{font-size:9.5px;font-weight:600;fill:#4F6358}
+.dg-ts{font-size:9.5px;font-weight:600;fill:#14261C}
 .dg-b{font-size:16px;font-weight:800;fill:#14261C;letter-spacing:-.01em}
 .dg-l{font-size:10px;font-weight:800;letter-spacing:.09em;fill:#36761D}
 .dg-ls{font-size:8.5px;font-weight:700;letter-spacing:.06em;fill:#395F4F}
@@ -268,6 +264,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
     .map-split{display:grid;grid-template-columns:1fr;gap:clamp(24px,3.4vw,38px);align-items:start}
     .place-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;align-items:start}
     .place-grid figcaption b{display:block;color:var(--green);font-size:13.5px;margin-bottom:2px}
+    .place-grid .photoframe img{aspect-ratio:1/1;object-fit:contain;background:#F7FAF8}
     .place-main{margin-top:22px}
     .place-main figcaption b{display:block;color:var(--green);font-size:15px;margin-bottom:3px}
 .location-info{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,32px);align-items:start}
@@ -374,10 +371,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 .js .reveal{opacity:0;transform:translateY(16px)}
 .js .reveal.is-in{opacity:1;transform:none}
 
-.wm{position:fixed;right:max(0px,calc((100vw - var(--shell)) / 2));top:0;width:var(--rail);height:100vh;pointer-events:none;z-index:40;display:flex;align-items:center;justify-content:center;overflow:visible}
-.wm__stage{position:relative;width:100%;max-width:calc(var(--rail) - 12px);aspect-ratio:1/1;transform-style:preserve-3d}
-.wm__canvas{width:100%;height:100%;display:block;filter:drop-shadow(0 18px 26px rgba(8,32,14,.30))}
-.wm__shadow{position:absolute;left:50%;bottom:-7%;width:72%;height:9%;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 50%,rgba(12,42,18,.42),rgba(12,42,18,0) 70%);filter:blur(5px)}
 
 @media (max-width:1180px){
   .nav{gap:0}
@@ -408,7 +401,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 }
 @media (max-width:900px){
   :root{--rail:0px}
-  .wm{display:none}
   .hero__badge{display:none}
 }
 @media (max-width:720px){
@@ -426,6 +418,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .reserve-row{grid-template-columns:1fr}
   .eng-facts{grid-template-columns:1fr}
   .eng-photos{grid-template-columns:1fr}
+  .photogallery__row{grid-template-columns:1fr}
   .hero__actions .btn{flex:1 1 auto}
   .lot__price{align-items:flex-start}
   .deck-viewer{padding:7px;border-radius:18px}
@@ -446,12 +439,11 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
   .js .reveal{opacity:1;transform:none}
   .artframe{transform:none !important}
-  .wm__canvas{filter:none}
 }
 @media print{
   @page{size:A4;margin:13mm}
   body{background:#fff;font-size:10.5pt;line-height:1.45;overflow:visible}
-  .topbar,.wm,.skip,.hero__actions,.hero__badge,.deck-viewer,.deck-thumbs,.deck-nav,.deck-count,.deck-actions,.contact-cta,.btn{display:none !important}
+  .topbar,.skip,.hero__actions,.hero__badge,.deck-viewer,.deck-thumbs,.deck-nav,.deck-count,.deck-actions,.contact-cta,.btn{display:none !important}
   .sec{padding:16px 0 !important;break-inside:auto}
   .sec--deck{display:none !important}
   .shell{max-width:none;padding:0 !important}
@@ -491,7 +483,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   @page{size:A4;margin:12mm}
   html,body{background:#fff !important;color:var(--ink) !important;font-size:9.5pt !important;line-height:1.42 !important;overflow:visible !important}
   .shell{max-width:none !important;padding:0 !important}
-  .topbar,.wm,.skip,.hero__actions,.hero__art,.deck-viewer,.deck-thumbs,.deck-nav,.deck-count,.deck-actions,.contact-cta,.btn,.sec--deck{display:none !important}
+  .topbar,.skip,.hero__actions,.hero__art,.deck-viewer,.deck-thumbs,.deck-nav,.deck-count,.deck-actions,.contact-cta,.btn,.sec--deck{display:none !important}
   .reveal,.js .reveal{opacity:1 !important;transform:none !important}
   .hero,.sec{padding:10px 0 !important;margin:0 !important;background:#fff !important;break-inside:auto !important;page-break-inside:auto !important}
   .hero{min-height:0 !important}
@@ -547,12 +539,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </head>
 <body>
 <a class="skip" href="#hero">Перейти к содержанию</a>
-<div aria-hidden="true" class="wm" id="wm">
-<div class="wm__stage" id="stage">
-<canvas class="wm__canvas" id="cv"></canvas>
-<div class="wm__shadow"></div>
-</div>
-</div>
 <header class="topbar" id="topbar">
 <div class="topbar__inner">
 <a aria-label="АРБУЗ, Советская Гавань — наверх" class="brand" href="#hero">
@@ -591,18 +577,18 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="shell">
 <div class="hero__grid">
 <div class="hero__copy">
-<div class="eyebrow">Публичные торги · Дальневосточный федеральный округ · 127-ФЗ</div>
-<h1>Готовый арендный бизнес за <span class="mark">40%</span> от себестоимости строительства 2015 года.</h1>
-<p class="lede">ТЦ «Арбуз», капитальный склад, земля  1,58 га располагаются на красной линии в логистическом хабе Советской Гавани, Хабаровский край.</p>
+<div class="eyebrow">Публичные торги · 127-ФЗ ·<br>Дальневосточный федеральный округ </div>
+<h1>Готовый арендный бизнес плюс недвижимость за <span class="mark">40%</span> от себестоимости (2015 года).</h1>
+<p class="lede">ТЦ «Арбуз», капитальный склад, земля расположены на красной линии в логистическом хабе Советской Гавани, Хабаровский край.</p>
 <div class="lot">
 <div class="lot__cap">Состав лота</div>
 <ul class="lot__list">
 <li><span>ТЦ «Арбуз», 4 этажа</span><b>11 520 кв.м</b></li>
 <li><span>Капитальный склад, 1 этаж</span><b>1 500 кв.м</b></li>
-<li><span> Три земельных участка</span><b>15 812 кв.м · 1,58 га</b></li>
+<li><span> Три земельных участка</span><b> 1,58 га</b></li>
 </ul>
 <div class="lot__price">
-<div><small>Пороговая цена аукциона</small><b>368 376 909 руб.</b></div>
+<div><small>Пороговая цена аукциона</small><b>368 376 909 ₽</b></div>
 <div class="deadline"><span>Срок подачи заявок</span>25 ноября 2026</div>
 </div>
 </div>
@@ -618,24 +604,13 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </div>
 <div class="hero__art">
 <div class="photogallery">
-<figure class="photoframe">
-<img alt="Фасад ТЦ «Арбуз» в Советской Гавани: четырёхэтажный торговый центр с парковкой перед входом." src="assets/face-building-1.jpg">
-<figcaption>ТЦ «Арбуз» — фасад здания и парковка.</figcaption>
+<figure class="photoframe photoframe--hero">
+<img alt="Фасад ТЦ «Арбуз» с улицы: четырёхэтажный торговый центр, входные группы, парковка и пешеходные переходы." src="assets/face-building-2.png">
 </figure>
 <div class="photogallery__row">
 <figure class="photoframe">
 <img alt="Капитальный склад: погрузочные ворота, площадка для фур и ограждающий забор." src="assets/sklad-1.jpg">
-<figcaption>Капитальный склад, площадь 1 500 кв.м .</figcaption>
-</figure>
-<figure class="photoframe">
-<img alt="Внутри капитального склада: стеллажи, паллеты с товаром и погрузочная зона." src="assets/sklad-2.jpg">
-<figcaption>Помещение склада. Высота потолков -до 6 м.</figcaption>
-</figure>
-</div>
-<div class="photogallery__row">
-<figure class="photoframe">
-<img alt="ТЦ «Арбуз» и капитальный склад с высоты: кровля зданий, парковка и площадка перед воротами." src="assets/arbuz-view-2.jpg">
-<figcaption>ТЦ «Арбуз» и склад — вид сверху.</figcaption>
+<figcaption>Капитальный склад.</figcaption>
 </figure>
 <figure class="photoframe">
 <img alt="Собственная электрическая подстанция и дизель-генератор на территории объекта." src="assets/power-station-1.jpg">
@@ -646,50 +621,41 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </div>
 </div>
 <div aria-label="Ключевые показатели" class="metric-strip">
-<div class="metric"><b>13 020 кв.м</b><span>Общая площадь зданий</span></div>
-<div class="metric"><b>28 293 руб.</b><span>Цена за кв.м</span></div>
-<div class="metric"><b>23,1 млн ₽</b><span>NOI в год, базовый сценарий</span></div>
-<div class="metric"><b>6,27%</b><span>Ставка капитализации</span></div>
-<div class="metric"><b>от 9 лет</b><span>Диапазон окупаемости</span></div>
+<div class="metric"><b>13 020 кв.м</b><span>Два здания</span></div>
+<div class="metric"><b>28 293 ₽</b><span>за кв. м.</span></div>
+<div class="metric"><b>23,1 млн ₽</b><span>NOI в год, текущий сценарий</span></div>
+<div class="metric"><b>от 10 лет</b><span>окупаемость</span></div>
 </div>
 </div>
 </section>
 <section class="sec sec--mint" id="summary">
 <div class="shell">
 <div class="sec-head reveal">
-<div class="eyebrow">Резюме проекта</div>
-<h2>Почему этот актив и почему сейчас</h2>
-<p class="lede" style="margin-top:14px">Четыре причины, которые выделяют этот проект среди других, каждая — с подтверждающей цифрой.</p>
+<h2>Почему этот актив сейчас</h2>
 </div>
 <figure class="mapcard reveal">
 <img alt="Карта Байкало-Амурской магистрали: Советская Гавань — восточная конечная станция БАМ, глубоководный порт Ванино и Транссибирская линия на западе. Источник карты: IZ.RU." src="assets/bam-sovetskaya-gavan.jpg"/>
-<figcaption>Байкало-Амурская магистраль — от тихоокеанских ворот. Советская Гавань — восточная конечная станция БАМ; глубоководный порт Ванино в 10 км. Источник карты: IZ.RU. Население: город Советская Гавань 23 232 + Ванинский район 33 201 (2025).</figcaption>
+<figcaption>Байкало-Амурская магистраль — от тихоокеанских ворот. Советская Гавань — восточная станция БАМ; глубоководный порт Ванино в 10 км.  Население: город Советская Гавань 23 232 + Ванинский район 33 201 (2025).</figcaption>
 </figure>
-<div class="snapshot reveal" style="margin-top:14px">
-<div><b>БАМ</b><span>Восточная конечная станция</span></div>
-<div><b>10 км</b><span>До глубоководного порта Ванино</span></div>
-<div><b>56 433</b><span>Население зоны охвата</span></div>
-</div>
 <div class="reason-grid reveal" style="margin-top:20px">
 <article class="reason">
 <h3>Инфляционный хедж</h3>
-<p>Капитальные стены и земля в собственности индексируются с инфляцией; фиксированные ставки по вкладам — нет.</p>
+<p>Капитальные стены и земля в собственности индексируются с инфляцией;  ставки по вкладам — нет.</p>
 <b>1,58 га в собственности · 3 участка</b>
 </article>
 <article class="reason">
 <h3>Нет системных рисков</h3>
-<p>Арендный поток формируется на месте в действующем активе — нет риска заморозки и лимитов по вкладам.</p>
-<b>95,5% занято · 4,5% вакантных площадей</b>
+<p>Арендный поток формируется  в действующем активе — нет риска заморозки и лимитов по вкладам.</p>
+<b>95,5% площадей заполнено ·</b>
 </article>
 <article class="reason">
 <h3>Монопольное положение</h3>
 <p>Единственный крупный ТЦ, обслуживающий два района, в центре города.</p>
-<b>56 433 жителя зоны охвата</b>
+<b>~ 57 000 жителей</b>
 </article>
 <article class="reason">
 <h3>Дисконт к оценке</h3>
-<p>Цена на 30,4% ниже независимой оценки 2025 года — измеримый дисконт на входе.</p>
-<b>Экономия 160 594 091 руб.</b>
+<p>Скидка  30% от независимой оценки 2025 года. Скидка 60% от себестоимости строительства</p>
 </article>
 </div>
 </div>
@@ -697,168 +663,62 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <section class="sec" id="economics">
 <div class="shell">
 <div class="sec-head reveal">
-<div class="eyebrow">Финансовый паспорт</div>
-<h2>Сначала цифры, потом история.</h2>
-<p>Два операционных сценария, разрыв в марже, создающий потенциал, и пятилетняя траектория с явными допущениями. Все цифры взяты из инвестиционного меморандума и независимой оценки 2025 года.</p>
+<h2>А теперь только цифры.</h2>
+<p>Два операционных сценария. Всего три основных шага для оптимизации: Первый -это использование склада 1500 кв. м. Второй -организация офиса на четвертом этаже. Третий шаг- повышение арендной ставки на 8-15 %. Все цифры взяты из независимой оценки 2025 года.</p>
 </div>
 <div class="scenarios">
 <article class="scenario reveal">
 <div class="scenario__head">
-<div><h3>Базовый сценарий</h3><p>Текущая эксплуатация</p></div>
-<span class="tag tag--live">Текущий</span>
+<div><h3>Текущий сценарий</h3></div>
 </div>
 <dl>
-<dt>Выручка</dt><dd>70 800 000 руб. / год</dd>
-<dt>NOI</dt><dd>23 080 800 руб. / год</dd>
+<dt>Выручка</dt><dd>70 800 000 ₽ / год</dd>
+<dt>NOI</dt><dd>23 080 800 ₽ / год</dd>
 <dt>Маржа NOI</dt><dd>33%</dd>
 <dt>Ставка капитализации</dt><dd>6,27%</dd>
-<dt>Валовая доходность</dt><dd>19,22%</dd>
 <dt>Окупаемость</dt><dd>15,96 лет</dd>
 <dt>GRM</dt><dd>5,20</dd>
-<dt>Аренда за кв.м / мес</dt><dd>453 руб. брутто · 148 руб. NOI</dd>
+<dt>Валовая доходность</dt><dd>19,22%</dd>
 </dl>
 </article>
 <article class="scenario scenario--opt reveal">
 <div class="scenario__head">
-<div><h3>Сценарий оптимизации</h3><p>После пересмотра аренды и заполнения 4,5% вакансии</p></div>
-<span class="tag tag--plan">Из меморандума</span>
+<div><h3>Сценарий оптимизации</h3></div>
 </div>
 <dl>
-<dt>Выручка</dt><dd>75 600 000 руб. / год</dd>
-<dt>Рост выручки</dt><dd>+6,8%</dd>
-<dt>NOI</dt><dd>27 492 000 руб. / год</dd>
-<dt>Рост NOI</dt><dd>+19,1%</dd>
+<dt>Выручка</dt><dd>75 600 000 ₽ / год</dd>
+<dt>NOI</dt><dd>27 492 000 ₽ / год</dd>
 <dt>Маржа NOI</dt><dd>36%</dd>
 <dt>Ставка капитализации</dt><dd>7,46%</dd>
 <dt>Окупаемость</dt><dd>13,4 года</dd>
 <dt>GRM</dt><dd>4,87</dd>
+<dt>Рост NOI</dt><dd>+19,1%</dd>
+<dt>Рост выручки</dt><dd>+6,8%</dd>
 </dl>
 </article>
 </div>
-<div class="finding reveal">
-<h3>Откуда на самом деле берётся потенциал</h3>
-<p>Маржа NOI 33% значительно ниже <strong>55–65% — нормы для районного ТЦ</strong>. Сценарий оптимизации меморандума даёт лишь <strong>+6,8% выручки</strong>, поэтому актив <strong>не слабый, а требующий грамотного управления</strong>. При текущих операционных расходах для маржи 55% нужна выручка <strong>106 042 667 руб. — +49,8%</strong>.</p>
-<div class="finding__check">Быстрая проверка: только заполнение 4,5% вакансии увеличивает NOI до 26 416 926 руб., а ставку капитализации — до 7,17%.</div>
-</div>
 <div class="kpis">
-<div class="kpi reveal"><span>Целевой NOI</span><b>27,5 млн ₽</b><small>в год, сценарий меморандума</small></div>
-<div class="kpi reveal"><span>Целевая ставка</span><b>7,46%</b><small>сценарий меморандума</small></div>
-<div class="kpi reveal"><span>GRM</span><b>4,9</b><small>сценарий меморандума</small></div>
-<div class="kpi reveal"><span>Окупаемость</span><b>13 лет</b><small>сценарий меморандума</small></div>
+<div class="kpi reveal"><span>Целевой NOI</span><b>27,5 млн ₽</b><small>в год</small></div>
+<div class="kpi reveal"><span>Целевая ставка</span><b>7,46%</b></div>
+<div class="kpi reveal"><span>GRM</span><b>4,9</b></div>
+<div class="kpi reveal"><span>Окупаемость</span><b>10 лет</b></div>
+<div class="kpi reveal"><span>Операционные расходы</span><b>34.8 млн ₽ </b><small>в год</small></div>
 </div>
-<div class="chart-card reveal">
-<h3>Пятилетняя операционная траектория</h3>
-<p class="chart-sub">Выручка +10% в год; NOI при неизменных операционных расходах и при инфляции расходов 5% в год. Линия ставки капитализации — на второй оси.</p>
-<div class="chart-scroll chart-scroll--wide">
-<svg aria-labelledby="pathTitle pathDesc" role="img" viewBox="0 0 760 360">
-<title id="pathTitle">График выручки, NOI и ставки капитализации за пять лет</title>
-<desc id="pathDesc">Выручка растёт с 77,9 до 114,0 млн руб. NOI при неизменных расходах растёт с 30,2 до 66,3 млн. NOI при инфляции расходов 5% растёт с 27,8 до 53,1 млн. Ставка капитализации достигает 18,0% в сценарии с неизменными расходами и 14,4% — при инфляции расходов.</desc>
-<defs>
-<linearGradient id="revenueFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#90CAF5"></stop><stop offset="1" stop-color="#C4E9FA"></stop></linearGradient>
-</defs>
-<g opacity=".65" stroke="#CBD5CC" stroke-width="1">
-<line x1="56" x2="700" y1="270" y2="270"></line>
-<line x1="56" x2="700" y1="210" y2="210"></line>
-<line x1="56" x2="700" y1="150" y2="150"></line>
-<line x1="56" x2="700" y1="90" y2="90"></line>
-<line x1="56" x2="700" y1="30" y2="30"></line>
-</g>
-<g fill="#6B7A72" font-size="10" font-weight="700">
-<text text-anchor="end" x="48" y="274">0</text>
-<text text-anchor="end" x="48" y="214">30</text>
-<text text-anchor="end" x="48" y="154">60</text>
-<text text-anchor="end" x="48" y="94">90</text>
-<text text-anchor="end" x="48" y="34">120</text>
-<text text-anchor="start" x="700" y="274">0%</text>
-<text text-anchor="start" x="700" y="214">5%</text>
-<text text-anchor="start" x="700" y="154">10%</text>
-<text text-anchor="start" x="700" y="94">15%</text>
-<text text-anchor="start" x="700" y="34">20%</text>
-<text text-anchor="middle" transform="rotate(-90 26 150)" x="26" y="150">млн руб.</text>
-<text text-anchor="middle" transform="rotate(90 734 150)" x="734" y="150">Ставка капитализации</text>
-</g>
-<g>
-<rect fill="url(#revenueFill)" height="155.8" rx="3" width="20" x="64" y="114.2"></rect>
-<rect fill="#36761D" height="60.4" rx="3" width="20" x="88" y="209.6"></rect>
-<rect fill="#FED966" height="55.6" rx="3" width="20" x="112" y="214.4"></rect>
-<rect fill="url(#revenueFill)" height="171.4" rx="3" width="20" x="184" y="98.6"></rect>
-<rect fill="#36761D" height="75.8" rx="3" width="20" x="208" y="194.2"></rect>
-<rect fill="#FED966" height="66.2" rx="3" width="20" x="232" y="203.8"></rect>
-<rect fill="url(#revenueFill)" height="188.4" rx="3" width="20" x="304" y="81.6"></rect>
-<rect fill="#36761D" height="93" rx="3" width="20" x="328" y="177"></rect>
-<rect fill="#FED966" height="78" rx="3" width="20" x="352" y="192"></rect>
-<rect fill="url(#revenueFill)" height="207.4" rx="3" width="20" x="424" y="62.6"></rect>
-<rect fill="#36761D" height="111.8" rx="3" width="20" x="448" y="158.2"></rect>
-<rect fill="#FED966" height="91.4" rx="3" width="20" x="472" y="178.6"></rect>
-<rect fill="url(#revenueFill)" height="228" rx="3" width="20" x="544" y="42"></rect>
-<rect fill="#36761D" height="132.6" rx="3" width="20" x="568" y="137.4"></rect>
-<rect fill="#FED966" height="106.2" rx="3" width="20" x="592" y="163.8"></rect>
-</g>
-<polyline fill="none" points="74,171.6 194,146.4 314,118.8 434,87.6 554,54" stroke="#19DAEC" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
-<g fill="#19DAEC" stroke="#fff" stroke-width="1.5">
-<circle cx="74" cy="171.6" r="4.5"></circle><circle cx="194" cy="146.4" r="4.5"></circle><circle cx="314" cy="118.8" r="4.5"></circle><circle cx="434" cy="87.6" r="4.5"></circle><circle cx="554" cy="54" r="4.5"></circle>
-</g>
-<polyline fill="none" points="74,180 194,162 314,142.8 434,121.2 554,97.2" stroke="#2F6B45" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
-<g fill="#fff" stroke="#2F6B45" stroke-width="1.5">
-<circle cx="74" cy="180" r="4"></circle><circle cx="194" cy="162" r="4"></circle><circle cx="314" cy="142.8" r="4"></circle><circle cx="434" cy="121.2" r="4"></circle><circle cx="554" cy="97.2" r="4"></circle>
-</g>
-<g fill="#395F4F" font-size="10" font-weight="700" text-anchor="middle">
-<text x="74" y="292">1-й</text><text x="194" y="292">2-й</text><text x="314" y="292">3-й</text><text x="434" y="292">4-й</text><text x="554" y="292">5-й</text>
-</g>
-<g fill="#6B7A72" font-size="9" font-weight="700" text-anchor="middle">
-<text x="74" y="310">77,9 · 30,2 · 27,8</text>
-<text x="194" y="310">85,7 · 37,9 · 33,1</text>
-<text x="314" y="310">94,2 · 46,5 · 39,0</text>
-<text x="434" y="310">103,7 · 55,9 · 45,7</text>
-<text x="554" y="310">114,0 · 66,3 · 53,1</text>
-</g>
-</svg>
-</div>
-<div class="legend">
-<span><i style="background:#90CAF5"></i>Выручка</span>
-<span><i style="background:#36761D"></i>NOI · OPEX без роста</span>
-<span><i style="background:#FED966"></i>NOI · OPEX +5% в год</span>
-<span><i class="line" style="background:#19DAEC"></i>Cap · OPEX без роста</span>
-<span><i class="line" style="background:#2F6B45"></i>Cap · OPEX +5%</span>
-</div>
-<p class="chart-caption">Индексация 10% в год выводит на рыночную маржу к 4–5 году, если операционные расходы не растут. При инфляции расходов 5% в год целевая маржа не достигается за пять лет — доходность определяет дисциплина расходов, а не аренда. Знаменатель цены: 368 376 909 руб. Значения — млн руб.</p>
-</div>
-<div class="chart-card reveal">
-<h3>Скрининг по ставке капитализации: цена, которую вы платите, и цена, которую подразумевает скрининг</h3>
-<p class="chart-sub">Подразумеваемая стоимость при базовом NOI 23,08 млн руб. и оптимизированном NOI 27,49 млн руб.</p>
-<div class="table-wrap">
-<table>
-<thead><tr><th>Ставка капитализации</th><th>Стоимость при базовом NOI 23,08 млн</th><th>При оптимизированном NOI</th></tr></thead>
-<tbody>
-<tr><td class="strong">8%</td><td>288 510 000 руб.</td><td>343 650 000 руб.</td></tr>
-<tr><td class="strong">9%</td><td>256 453 333 руб.</td><td>305 466 667 руб.</td></tr>
-<tr><td class="strong">10%</td><td>230 808 000 руб.</td><td>274 920 000 руб.</td></tr>
-<tr><td class="strong">12%</td><td>192 340 000 руб.</td><td>229 100 000 руб.</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="rent-strip">
-<div class="rent reveal"><span>Аренда, брутто</span><b>453 руб. / кв.м / мес</b><small>148 руб. / кв.м / мес NOI</small></div>
-<div class="rent reveal"><span>Эффективная цена с землёй</span><b>12 777 руб. / кв.м</b><small>Здания плюс 1,58 га земли</small></div>
-<div class="rent reveal"><span>Операционные расходы</span><b>47,7 млн ₽ / год</b><small>67,4% выручки</small></div>
-</div>
-</div>
+<p>ВОЗНАГРАЖДЕНИЕ агентам — 4 млн ₽. Выплата по факту закрытия сделки. Идентиф. номер на МЭТС: 204308-МЭТС-1</p>
 </section>
 <section class="sec sec--white" id="discount">
 <div class="shell">
 <div class="sec-head reveal">
 <div class="eyebrow">Дисконт</div>
-<h2>Два ориентира. Два отдельных дисконта.</h2>
-<p>Цена аукциона ниже и себестоимости строительства 2015 года, и независимой оценки 2025 года. Эти два показателя измеряются от разных ориентиров и не суммируются.</p>
+<h2>Два дисконта · <br>Готовый арендный бизнес</h2>
 </div>
 <div class="chart-card reveal">
 <h3>От себестоимости и оценки к цене аукциона</h3>
-<p class="chart-sub">млн руб. Себестоимость 2015 года показана как ориентир со штриховкой.</p>
+<p class="chart-sub">млн ₽. Себестоимость 2015 года показана как ориентир со штриховкой.</p>
 <div class="chart-scroll">
 <svg aria-labelledby="wfTitle wfDesc" role="img" viewBox="0 0 760 300">
 <title id="wfTitle">Водопад дисконта</title>
-<desc id="wfDesc">Себестоимость строительства 2015 года — 900 млн руб. Независимая оценка 2025 года — 528,97 млн. Цена аукциона — 368,38 млн. Цена аукциона составляет 40,9% от себестоимости 2015 года и на 30,4% ниже оценки 2025 года.</desc>
+<desc id="wfDesc">Себестоимость строительства 2015 года — 900 млн ₽ Независимая оценка 2025 года — 528,97 млн. Цена аукциона — 368,38 млн. Цена аукциона составляет 40,9% от себестоимости 2015 года и на 30,4% ниже оценки 2025 года.</desc>
 <defs>
 <pattern height="10" id="hatch" patternTransform="rotate(45)" patternUnits="userSpaceOnUse" width="10">
 <rect fill="#EEEEEE" height="10" width="10"></rect>
@@ -871,17 +731,17 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <line x1="548.7" x2="548.7" y1="34" y2="244"></line>
 <line x1="728" x2="728" y1="34" y2="244"></line>
 </g>
-<g fill="#6B7A72" font-size="10" font-weight="700" text-anchor="middle">
+<g fill="#14261C" font-size="10" font-weight="700" text-anchor="middle">
 <text x="190" y="264">0</text><text x="369.3" y="264">300</text><text x="548.7" y="264">600</text><text x="728" y="264">900</text>
-<text x="459" y="286">млн руб.</text>
+<text x="459" y="286">млн ₽</text>
 </g>
 <g fill="#14261C" font-size="11" font-weight="800">
 <text x="28" y="52">СЕБЕСТОИМОСТЬ 2015</text>
-<text fill="#6B7A72" font-size="9.5" font-weight="700" x="28" y="66">ОРИЕНТИР · 900 МЛН ₽</text>
+<text fill="#14261C" font-size="9.5" font-weight="700" x="28" y="66">ОРИЕНТИР · 900 МЛН ₽</text>
 <text x="28" y="112">ОЦЕНКА 2025</text>
-<text fill="#6B7A72" font-size="9.5" font-weight="700" x="28" y="126">НЕЗАВИСИМАЯ · 528,97 МЛН ₽</text>
+<text fill="#14261C" font-size="9.5" font-weight="700" x="28" y="126">НЕЗАВИСИМАЯ · 528,97 МЛН ₽</text>
 <text x="28" y="172">ЦЕНА АУКЦИОНА</text>
-<text fill="#6B7A72" font-size="9.5" font-weight="700" x="28" y="186">ПОРОГ · 368,38 МЛН ₽</text>
+<text fill="#14261C" font-size="9.5" font-weight="700" x="28" y="186">ПОРОГ · 368,38 МЛН ₽</text>
 </g>
 <rect fill="url(#hatch)" height="40" rx="8" stroke="#CBD5CC" stroke-width="1.5" width="538" x="190" y="40"></rect>
 <rect fill="#FED966" height="40" rx="8" stroke="#D5AE2E" stroke-width="1.5" width="316.1" x="190" y="102"></rect>
@@ -899,32 +759,37 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </div>
 </div>
 <div class="kpis" style="margin-top:18px">
-<div class="kpi reveal"><span>Экономия к оценке</span><b>160,59 млн ₽</b><small>30,4% ниже</small></div>
-<div class="kpi reveal"><span>Цена к себестоимости</span><b>531,62 млн ₽</b><small>59,1% ниже</small></div>
-<div class="kpi reveal"><span>Кратность к себестоимости</span><b>2,44×</b><small>дешевле строительства</small></div>
-<div class="kpi reveal"><span>Цена за кв.м</span><b>28 293 руб.</b><small>общая площадь зданий</small></div>
+<div class="kpi reveal"><span>Цена </span><b>368,3 млн ₽</b><small>ГАБ, ТЦ, склад, земля</small></div>
+<div class="kpi reveal"><span>Скидка </span><b>161 млн ₽</b><small>независимая оценка 2025 г.</small></div>
+<div class="kpi reveal"><span>Скидка</span><b>59%</b><small>от себестоимости стройки 2015 г.</small></div>
+<div class="kpi reveal"><span>Цена за кв.м</span><b>28 293 ₽</b><small></small></div>
+<div class="kpi reveal"><span>Сравнение</span><b>Владивосток </b><small>в 7 раз дороже</small></div>
 </div>
 <div class="chart-card reveal" style="margin-top:30px">
-<h3 style="font-size:clamp(20px,2.2vw,26px)">Монопольный актив за 28 293 ₽/м² с понятным переходом на окупаемость 9–10 лет</h3>
+<h3 style="font-size:clamp(20px,2.2vw,26px)">Монопольный актив за 28 293 ₽/м² <br> с понятным переходом на окупаемость 9–10 лет</h3>
 <p class="chart-sub">Инвестор заходит в готовый арендный бизнес с заполнением 95,5%, где 80% выручки защищено федеральными и региональными сетями («Самбери», KARI, Ozon, банки).</p>
-<p style="margin-top:18px">Быстрый запуск двух свободных резервов по консервативной ставке <b>250 ₽/м² (+10,20 млн ₽/год)</b>:</p>
+<p style="margin-top:18px">Быстрый запуск двух резервов по консервативной ставке <b>250 ₽/м² </b>(+10,2 млн ₽/год):</p>
 <div class="reserve-row">
 <article class="lever">
-<span class="lever__n">01</span>
 <div>
 <h3>Сдача склада 1 500 м²</h3>
 <p>Под региональную логистику — <b>+4,50 млн ₽/год</b>.</p>
 </div>
 </article>
 <article class="lever">
-<span class="lever__n">02</span>
 <div>
-<h3>Запуск офисного пространства 4-го этажа 1 900 м²</h3>
+<h3>Сдача офиса на 4-м этаже 1 900 м²</h3>
 <p>Под корпоративный сектор — <b>+5,70 млн ₽/год</b>.</p>
 </div>
 </article>
+<article class="lever">
+<div>
+<h3>Мягкая ротация и индексация пула ИП</h3>
+<p><b>+15% к сборам</b></p>
 </div>
-<p style="margin-top:20px">Мягкая ротация и индексация пула ИП (<b>+8–15%</b> к сборам) гарантированно выводит чистый операционный доход на уровень <b>36,8–41,0 млн ₽/год</b>, сокращая срок чистой окупаемости всего комплекса до <b>9–10 лет</b> (Cap Rate 10–11%).</p>
+</article>
+</div>
+<p style="margin-top:20px"> <span style="color: #8a0b40;">Гарантированно выводет чистый операционный доход на уровень </span><b>41,0 млн ₽/год</b>, сокращая срок чистой окупаемости всего комплекса до <b>10 лет</b> (Cap Rate 11%).</p>
 </div>
 </div>
 </section>
@@ -939,22 +804,19 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="floor__art">
 <figure class="planframe reveal">
 <img alt="Фасад ТЦ «Арбуз» с улицы: четырёхэтажный торговый центр с входными группами, парковкой и пешеходными переходами." src="assets/face-building-2.png">
-<figcaption>ТЦ «Арбуз» — фасад с улицы Пушкина.</figcaption>
 </figure>
 <figure class="planframe reveal">
 <img alt="План 1 этажа: якорный супермаркет «Самбери», OZON, «Золотая Русь», салоны связи, аптека и фуд-корт." src="assets/floor-1.jpg">
-<figcaption>План 1 этажа. </figcaption>
 </figure>
 </div>
 <div class="floor__facts reveal">
-<div class="floor__meta">Уровень 1 · 11 520 кв.м общей площади</div>
+<div class="floor__meta">Этаж 1 · </div>
 <h3>Супермаркет и услуги</h3>
-<p>Первый этаж имеет якорного арендатора и трафик повседневного спроса. Региональный супермаркет, салоны связи, пункт выдачи маркетплейса, ювелирный магазин, аптека и фуд-корт создают повторные визиты, а не поездку за одной покупкой.</p>
 <ul class="fact-list">
-<li>Площадь галереи <b>~2 900 кв.м</b></li>
+<li>Площадь  <b>~2 900 кв.м</b></li>
 <li>Якорный арендатор <b>Самбери · 1 900 кв.м</b></li>
 <li>Салоны связи <b>МТС · МегаФон · Теле2</b></li>
-<li>OZON, ювелирный «Золотая Русь», аптека, фуд-корт</li>
+<li>OZON, ювелирный «Золотая Русь», аптека</li>
 </ul>
 </div>
 </div>
@@ -962,18 +824,15 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="floor__art">
 <figure class="planframe reveal">
 <img alt="План 2 этажа: открытая галерея и отдельные торговые ячейки." src="assets/floor-2.jpg">
-<figcaption>План 2 этажа. </figcaption>
 </figure>
 </div>
 <div class="floor__facts reveal">
-<div class="floor__meta">Уровень 2 · открытая планировка</div>
-<h3>Мода и развлечения</h3>
+<div class="floor__meta">Этаж 2 · открытая планировка</div>
+<h3>Мода </h3>
 <p>Открытая галерея даёт каждой ячейке витрину на главном маршруте. Развлекательный блок добавляет вечерние и выходные визиты, а ювелирные изделия и товары для дома расширяют предложение за пределы моды.</p>
 <ul class="fact-list">
 <li>Торговля вокруг <b>открытой галереи</b></li>
-<li>Кинотеатр / семейный развлекательный блок</li>
-<li>Ювелирные изделия и товары для дома</li>
-<li>Эскалаторы и грузовые лифты</li>
+<li>Эскалаторы </li>
 </ul>
 </div>
 </div>
@@ -981,26 +840,23 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="floor__art">
 <figure class="planframe reveal">
 <img alt="План 3 этажа: KARI 557,2 кв.м, торговля и кафе." src="assets/floor-3.jpg">
-<figcaption>План 3 этажа. </figcaption>
 </figure>
 <figure class="planframe reveal">
 <img alt="План 4 этажа: офисы и кафе." src="assets/floor-4.jpg">
-<figcaption>План 4 этажа. </figcaption>
 </figure>
 </div>
 <div class="floor__facts reveal">
-<div class="floor__meta">Уровни 3–4</div>
-<h3>Торговля, офисы и банкетный зал</h3>
-<p>Верхние этажи объединяют целевую торговлю с офисным и событийным пространством. Банкетный зал на 4 этаже и «Kafe Manna» с открытой террасой монетизируют здание за пределами торговли.</p>
+<div class="floor__meta">Этажи 3–4</div>
+<h3>Торговля, офисы </h3>
+<p>Верхние этажи объединяют целевую торговлю с офисным. Банкетный зал на 4 этаже и Кафе «Малина» ,которое работает в разных форматах.</p>
 <ul class="fact-list">
-<li>Уровень 3 — торговля и кафе, <b>KARI 557,2 кв.м</b></li>
-<li>Уровень 4 — офисы <b>1 899 кв.м</b></li>
-<li>Банкетный зал, «Кафе Малина» с кухней</li>
-<li>Открытая терраса кафе</li>
+<li>Этаж 3 — торговля и кафе, <b>KARI 557,2 кв.м</b></li>
+<li>Этаж 4 — офисы <b>1 899 кв.м</b></li>
+<li> «Кафе Малина» ,банкетный зал,</li>
+<li>Выход на открытую террасу </li>
 </ul>
 <figure class="photoframe reveal" style="margin-top:16px">
 <img alt="Кафе «Малина» на 4 этаже: банкетный зал с мягкой мебелью, сценой и праздничным оформлением." src="assets/floor-3-cafe.jpg">
-<figcaption>Кафе «Малина», 4 этаж — левая часть зала.</figcaption>
 </figure>
 </div>
 </div>
@@ -1022,7 +878,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <p style="margin-top:12px"><b>Проверка площади:</b> 8 503 + 4 500 + 2 809 = 15 812 кв.м = 1,58 га.</p>
 </article>
 </div>
-<p class="footnote reveal" style="max-width:88ch;margin-top:24px">Документированные арендопригодные площади — ~5 356 кв.м (1 этаж ~2 900; 3 этаж 557,2; 4 этаж 1 899; 2 этаж не указан); остальное — общие зоны. При GLA ~5 400–7 000 кв.м эффективная цена — 52 000–68 000 руб. / кв.м. Якорный арендатор «Самбери» — ~33% GLA.</p>
+<p class="footnote reveal" style="max-width:88ch;margin-top:24px">Документированные арендопригодные площади — ~5 356 кв.м (1 этаж ~2 900; 3 этаж 557,2; 4 этаж 1 899; 2 этаж не указан); остальное — общие зоны. При GLA ~5 400–7 000 кв.м эффективная цена — 52 000–68 000 ₽ / кв.м. Якорный арендатор «Самбери» — ~33% GLA.</p>
 </div>
 </section>
 <section class="sec" id="location">
@@ -1040,11 +896,11 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="place-grid">
 <figure class="photoframe reveal">
 <img alt="Карта Яндекса: земельный участок с ТЦ «Арбуз», супермаркетом «Самбери» и фронтальной парковкой вдоль улицы Пушкина." src="assets/place-yandexarbuz.jpg">
-<figcaption><b>8 503 кв.м</b>Зона ТЦ «Арбуз» и фронтальной парковки</figcaption>
+<figcaption><b>8 503 кв.м</b>ТЦ «Арбуз» и фронтальная парковка</figcaption>
 </figure>
 <figure class="photoframe reveal">
 <img alt="Карта Яндекса: участок капитального склада и логистической зоны к северу от торгового центра." src="assets/place-sklad.jpg">
-<figcaption><b>4 500 кв.м</b>Зона склада и логистики</figcaption>
+<figcaption><b>4 500 кв.м</b>Склад</figcaption>
 </figure>
 <figure class="photoframe reveal">
 <img alt="Карта Яндекса: участок с фронтом по улице Пушкина — резерв развития." src="assets/place-red.jpg">
@@ -1064,7 +920,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </ul>
 <div class="tgmk">
 <span class="tag tag--plan">Планируется</span>
-<p>«Полиметалл» вернулся к предпроектной проработке Тихоокеанского гидрометаллургического комбината (ТГМК) в Советской Гавани после паузы 2022 года. В июне 2026 года компания, правительство Хабаровского края и «Росводоканал» подписали трёхстороннее соглашение о современных очистных сооружениях (3 500 м³/сут, первый этап — к 2031 году). Плановая мощность — 250–300 тыс. тонн стороннего золотого концентрата в год; ранее проект оценивался в 60 млрд руб.</p>
+<p>«Полиметалл» вернулся к предпроектной проработке Тихоокеанского гидрометаллургического комбината (ТГМК) в Советской Гавани после паузы 2022 года. В июне 2026 года компания, правительство Хабаровского края и «Росводоканал» подписали трёхстороннее соглашение о современных очистных сооружениях (3 500 м³/сут, первый этап — к 2031 году). Плановая мощность — 250–300 тыс. тонн стороннего золотого концентрата в год; ранее проект оценивался в 60 млрд ₽</p>
 </div>
 </div>
 </div>
@@ -1116,7 +972,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="sec-head reveal">
 <div class="eyebrow">Точки роста</div>
 <h2>Пять действий собственника. Один результат.</h2>
-<p>Все пять рычагов не требуют капитала от арендаторов. Сценарий оптимизации меморандума предполагает лишь +6,8% выручки; разрыв между этим и маржой 55% — там, где создаётся стоимость актива.</p>
 </div>
 <div class="flow">
 <div class="flow__levers">
@@ -1147,13 +1002,13 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </div>
 <aside class="flow__outcome reveal">
 <div class="eyebrow">Один результат</div>
-<div class="outcome-big"><small>NOI · руб. в год</small>23,1 → 27,5 млн</div>
+<div class="outcome-big"><small>NOI · ₽ в год</small>23,1 → 27,5 млн</div>
 <div class="outcome-cap">CAP 6,27% → 7,46%</div>
 <p class="outcome-note">Сценарий меморандума даёт +19,1% NOI. Маржа 55–65% остаётся более крупным призом.</p>
 </aside>
 </div>
-<div class="upside-note reveal">
-<b>Честная оговорка.</b> Все пять рычагов — действия собственника, не требующие капитала от арендаторов. Текущие финансовые показатели Комплекса сформированы «в исходном состоянии» без проведения коммерческой оптимизации. Это создает для нового собственника колоссальный резерв для роста
+<div class="upside-note reveal"style="font-size: 20px;">
+ Все пять рычагов — действия собственника. Текущие финансовые показатели Комплекса сформированы «в исходном состоянии» без проведения коммерческой оптимизации. Это создает для нового собственника колоссальный резерв для роста
 </div>
 </div>
 </section>
@@ -1162,7 +1017,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="sec-head reveal">
 <div class="eyebrow">Процесс, юридика, налоги</div>
 <h2>Раздел доверия.</h2>
-<p>Публичные торги по 127-ФЗ, чистый титульный механизм и налоговая трактовка, важная для покупателя без права на вычет входного НДС.</p>
+<p>Публичные торги по 127-ФЗ.</p>
 </div>
 <div class="process">
 <article class="card reveal">
@@ -1172,20 +1027,14 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </article>
 <article class="card reveal">
 <div class="num-chip">02</div>
-<h3>Процедура покупки</h3>
-<p>Публичные торги, открытые торги, по пороговой цене. Процесс прозрачен, цена — пороговая цена аукциона.</p>
+<h3>Необходимость в NDA при покупке комплекса на МЭТС</h3>
+<p>Необходимость есть, если вы серьезно рассматриваете этот объект для приобретения и хотите провести глубокий финансовый и юридический аудит (Due Diligence)</p>
 </article>
 <article class="card reveal">
 <div class="num-chip">03</div>
 <h3>Срок подачи заявок</h3>
-<p>Заявки принимаются до <span class="date-red">25 ноября 2026</span>. Пропустить дату — единственный способ потерять актив.</p>
+<p>Заявки принимаются до <span class="date-red">25 ноября 2026</span>.</p>
 </article>
-</div>
-<div class="tax reveal">
-<h3>Налоговая оговорка — точно</h3>
-<p>Реализация имущества банкрота не облагается НДС (пп. 15 п. 2 ст. 146 НК РФ). Для покупателя без права на вычет входного НДС это стоит <b>16,7% цены</b> (368 376 909 руб. против 442 052 291 руб. с НДС).</p>
-<p>Преференции Свободного порта (СПВ) и Территории опережающего развития (ТОР) — <b>ноль налога на имущество на 5 лет, ноль земельного налога на 5 лет, снижение социальных взносов с 30% до 7,6%</b> — требуют регистрации актива под отдельным проектом, статуса резидента и налогового заключения. Это режим для резидента, а не автоматическое право покупателя.</p>
-<p class="law">Источник: инвестиционный меморандум; НК РФ, ст. 146, п. 2, пп. 15.</p>
 </div>
 </div>
 </section>
@@ -1385,235 +1234,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
       if (e.key === 'ArrowRight'){ e.preventDefault(); showSlide(current + 1); }
     });
   }
-})();
-
-(function(){
-  "use strict";
-  var cv    = document.getElementById('cv');
-  var ctx   = cv.getContext('2d');
-  var wm    = document.getElementById('wm');
-  var stage = document.getElementById('stage');
-  if (!cv || !ctx || !wm || !stage) return;
-
-  var D = 190, img = null, buf = null;
-  var R = 1, RX = 1, RY = 1, CX = 1, CY = 1;
-  var ang = 0, spin = 0.5, tilt = 0.20;
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function sizeCanvas(){
-    var rect = stage.getBoundingClientRect();
-    var css = Math.max(80, Math.min(rect.width, rect.height) - 16);
-    var dpr = Math.min(2, window.devicePixelRatio || 1);
-    cv.width = Math.round(css*dpr); cv.height = Math.round(css*dpr);
-    D = cv.width; img = ctx.createImageData(D,D); buf = new Uint32Array(img.data.buffer);
-    cv.style.width = css+'px'; cv.style.height = css+'px';
-    R = D*0.375; RX = D*0.375; RY = D*0.405; CX = D/2; CY = D*0.565;
-    render();
-  }
-
-  function hash(n){ var s = Math.sin(n)*43758.5453; return s - Math.floor(s); }
-
-  function render(){
-    var i = 0;
-    var lx=-0.46, ly=-0.60, lz=0.66;
-    var ln=Math.sqrt(lx*lx+ly*ly+lz*lz); lx/=ln; ly/=ln; lz/=ln;
-    var fx=0.52, fy=0.18, fz=0.83;
-    var fn=Math.sqrt(fx*fx+fy*fy+fz*fz); fx/=fn; fy/=fn; fz/=fn;
-    var ct=Math.cos(tilt), st=Math.sin(tilt);
-    var ca=Math.cos(ang), sa=Math.sin(ang);
-    var hx=lx, hy=ly, hz=lz+1, hn=Math.sqrt(hx*hx+hy*hy+hz*hz); hx/=hn; hy/=hn; hz/=hn;
-    var BANDS = 14.0;
-    var BW = [], BS = [];
-    for (var b=0;b<BANDS;b++){
-      BW[b] = 0.16 + 0.13*hash(b*17.3+3.1);
-      BS[b] = hash(b*43.7+7.0) > 0.86 ? 0.66 : 1.0;
-    }
-    for (var y=0; y<D; y++){
-      var ny=(y-CY)/RY;
-      for (var x=0; x<D; x++){
-        var nx=(x-CX)/RX;
-        var d2=nx*nx+ny*ny;
-        if (d2>1){ buf[i++]=0; continue; }
-        var nz=Math.sqrt(1-d2);
-        var vx=nx/RX, vy=ny/RY, vz=nz/RX;
-        var vn=Math.sqrt(vx*vx+vy*vy+vz*vz); vx/=vn; vy/=vn; vz/=vn;
-        var ry=vy*ct-vz*st, rz=vy*st+vz*ct;
-        var rx=vx*ca+rz*sa, rzz=-vx*sa+rz*ca;
-        var bump=0.022*Math.sin(nx*19.0+ny*13.0+ang*0.7);
-        rx+=bump; ry+=bump*0.6; rzz+=bump*0.4;
-        var nl=Math.sqrt(rx*rx+ry*ry+rzz*rzz); rx/=nl; ry/=nl; rzz/=nl;
-        var lon=Math.atan2(rzz,rx);
-        var lat=ry;
-        var drift=0.11*Math.sin(lat*5.3+1.7)+0.05*Math.sin(lat*11.1-0.4);
-        var u=(lon/(Math.PI*2)+0.5)*BANDS+drift*BANDS*0.09;
-        var bandF=Math.floor(u);
-        var band=((bandF%BANDS)+BANDS)%BANDS;
-        var f=u-bandF;
-        var tri=Math.abs(f-0.5)*2;
-        var edge=0.050*Math.sin(lat*12.5+band*2.1+0.6)+0.028*Math.sin(lat*27.0-band*1.4);
-        var t=tri+edge;
-        var w=BW[band]+0.035*Math.sin(lat*7.0+band*1.3);
-        var soft=(t-w)/0.11;
-        soft=soft<0?0:(soft>1?1:soft);
-        soft=soft*soft*(3-2*soft);
-        var dark=(1-soft)*BS[band];
-        var baseR=122-78*dark, baseG=174-104*dark, baseB=82-50*dark;
-        var mott=0.94+0.10*Math.sin(lat*23.0+band*2.1);
-        baseR*=mott; baseG*=mott; baseB*=mott;
-        var fd=rx*(-0.54)+ry*0.60+rzz*0.59;
-        var fs=(fd-0.55)/0.35;
-        fs=fs<0?0:(fs>1?1:fs);
-        fs=fs*fs*(3-2*fs)*0.24;
-        baseR=baseR*(1-fs)+220*fs; baseG=baseG*(1-fs)+208*fs; baseB=baseB*(1-fs)+154*fs;
-        var latAbs=Math.abs(lat);
-        var lat2=latAbs*latAbs;
-        var pole=1-0.16*lat2*latAbs;
-        baseR*=pole; baseG*=pole*1.02; baseB*=pole*0.94;
-        var ndl=rx*lx+ry*ly+rzz*lz;
-        var diff=Math.max(0,(ndl+0.30)/1.30);
-        var ndf=rx*fx+ry*fy+rzz*fz;
-        var fill=Math.max(0,(ndf+0.50)/1.50);
-        var k=0.44+0.58*Math.pow(diff,0.90)+0.22*Math.pow(fill,1.4);
-        var rr=baseR*k, gg=baseG*k, bb=baseB*k;
-        var sd=Math.max(0, rx*hx+ry*hy+rzz*hz);
-        var bw=Math.pow(sd,9)*22;
-        rr+=bw; gg+=bw*1.04; bb+=bw*0.92;
-        var spec=Math.pow(sd,34)*62;
-        rr+=spec*0.96; gg+=spec; bb+=spec*0.92;
-        var fres=Math.pow(1-Math.max(0,vz),3.0)*30;
-        rr+=fres*0.45; gg+=fres*0.85; bb+=fres*0.55;
-        var ao=1-0.14*Math.max(0,ny);
-        rr*=ao; gg*=ao; bb*=ao;
-        if (ry > 0.74){
-          var scar=Math.min(1,(ry-0.74)/0.20);
-          var sk=scar*scar*(3-2*scar);
-          rr=rr*(1-sk)+224*sk; gg=gg*(1-sk)+214*sk; bb=bb*(1-sk)+164*sk;
-        }
-        buf[i++]=(255<<24)|(Math.min(255,bb|0)<<16)|(Math.min(255,gg|0)<<8)|Math.min(255,rr|0);
-      }
-    }
-    ctx.putImageData(img,0,0);
-    drawStem();
-  }
-
-  function drawStem(){
-    var top = CY - RY, cx = CX;
-    ctx.save();
-    ctx.lineCap='round'; ctx.lineJoin='round';
-    ctx.globalAlpha=0.30; ctx.fillStyle='#132a10';
-    ctx.beginPath(); ctx.ellipse(cx, top+RX*0.015, RX*0.105, RX*0.048, 0, 0, Math.PI*2); ctx.fill();
-    ctx.globalAlpha=1;
-    ctx.strokeStyle='#4e4a22'; ctx.lineWidth=Math.max(3, RX*0.058);
-    ctx.beginPath();
-    ctx.moveTo(cx, top+RX*0.02);
-    ctx.quadraticCurveTo(cx+RX*0.035, top-RX*0.055, cx+RX*0.075, top-RX*0.125);
-    ctx.stroke();
-    ctx.strokeStyle='#7c7038'; ctx.lineWidth=Math.max(1.2, RX*0.024);
-    ctx.beginPath();
-    ctx.moveTo(cx+RX*0.006, top+RX*0.008);
-    ctx.quadraticCurveTo(cx+RX*0.040, top-RX*0.055, cx+RX*0.068, top-RX*0.115);
-    ctx.stroke();
-    ctx.strokeStyle='#6d7738'; ctx.lineWidth=Math.max(1.6, RX*0.030);
-    ctx.beginPath();
-    ctx.moveTo(cx+RX*0.075, top-RX*0.125);
-    ctx.bezierCurveTo(cx+RX*0.24, top-RX*0.24, cx+RX*0.20, top-RX*0.40, cx+RX*0.075, top-RX*0.36);
-    ctx.bezierCurveTo(cx+RX*0.005, top-RX*0.33, cx+RX*0.06, top-RX*0.26, cx+RX*0.125, top-RX*0.29);
-    ctx.stroke();
-    ctx.strokeStyle='#5b6330'; ctx.lineWidth=Math.max(1.2, RX*0.020);
-    ctx.beginPath();
-    ctx.moveTo(cx+RX*0.05, top-RX*0.09);
-    ctx.quadraticCurveTo(cx-RX*0.06, top-RX*0.16, cx-RX*0.09, top-RX*0.24);
-    ctx.stroke();
-    ctx.restore();
-  }
-
-  var railTimer = 0, textBlocks = [];
-  var TEXT_SEL = 'p,h1,h2,h3,h4,h5,li,td,th,dd,dt,blockquote,.card,figcaption,label';
-  function updateRail(){ sizeCanvas(); }
-  function refreshText(){
-    textBlocks = [];
-    var els = document.querySelectorAll(TEXT_SEL);
-    for (var i = 0; i < els.length; i++){
-      var el = els[i];
-      if (!el.offsetWidth && !el.offsetHeight) continue;
-      var r = el.getBoundingClientRect();
-      if (!r.width || !r.height) continue;
-      textBlocks.push({
-        right: r.right,
-        left: r.left,
-        top: r.top + (window.scrollY || window.pageYOffset),
-        bottom: r.bottom + (window.scrollY || window.pageYOffset)
-      });
-    }
-  }
-  function bandBlocked(mRect){
-    var sy = window.scrollY || window.pageYOffset;
-    for (var i = 0; i < textBlocks.length; i++){
-      var b = textBlocks[i];
-      var vt = b.top - sy, vb = b.bottom - sy;
-      if (vb <= mRect.top || vt >= mRect.bottom) continue;
-      if (b.right > mRect.left && b.left < mRect.right) return true;
-    }
-    return false;
-  }
-
-  var scrollTarget=0, scrollCurrent=0, lastScroll=0, vel=0;
-  var y=0, idleSince=performance.now(), targetY=0;
-  var SLOT=[0.16,0.40,0.64,0.85];
-
-  function onScroll(){
-    scrollTarget = window.scrollY || window.pageYOffset;
-    var d = scrollTarget - lastScroll;
-    lastScroll = scrollTarget;
-    vel = vel*0.7 + d*0.3;
-    if (Math.abs(d) > 0.5) idleSince = performance.now();
-  }
-
-  window.addEventListener('scroll', function(){
-    onScroll();
-    var now = performance.now();
-    if (now - railTimer > 220){ railTimer = now; updateRail(); refreshText(); }
-  }, {passive:true});
-  window.addEventListener('resize', function(){ updateRail(); refreshText(); onScroll(); });
-  window.addEventListener('load', function(){ updateRail(); refreshText(); onScroll(); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ refreshText(); });
-
-  function tick(now){
-    scrollCurrent += (scrollTarget - scrollCurrent) * 0.12;
-    var vh = window.innerHeight, vw = window.innerWidth;
-    var max = Math.max(1, document.documentElement.scrollHeight - vh);
-    var prog = Math.min(1, Math.max(0, scrollCurrent / max));
-    var idle = (now - idleSince) > 260;
-    var stageH = stage.offsetHeight || D;
-
-    if (reduced){
-      spin = 0;
-      targetY = vh*0.5 - stageH/2;
-    } else {
-      spin = idle ? 0.32 : 0.32 + Math.min(7, Math.abs(vel)*0.05);
-      ang += spin * 0.016;
-      if (idle) targetY = vh*SLOT[Math.round(prog*(SLOT.length-1))] - stageH/2;
-      else      targetY = -stageH*0.2 + prog*(vh + stageH*0.2);
-    }
-    y += (targetY - y) * 0.10;
-    stage.style.transform = 'translate3d(0,' + y.toFixed(1) + 'px,0)';
-
-    var mRect = stage.getBoundingClientRect();
-    var fits = !bandBlocked(mRect);
-    wm.style.opacity = fits ? '1' : '0';
-    wm.style.visibility = fits ? 'visible' : 'hidden';
-    if (!fits) return requestAnimationFrame(tick);
-
-    render();
-    requestAnimationFrame(tick);
-  }
-
-  updateRail();
-  refreshText();
-  sizeCanvas();
-  scrollTarget = scrollCurrent = window.scrollY || 0;
-  idleSince = performance.now();
-  requestAnimationFrame(tick);
 })();
 </script>
 </body>
