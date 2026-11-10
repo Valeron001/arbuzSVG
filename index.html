@@ -265,6 +265,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
     .place-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;align-items:start}
     .place-grid figcaption b{display:block;color:var(--green);font-size:13.5px;margin-bottom:2px}
     .place-grid .photoframe img{aspect-ratio:1/1;object-fit:contain;background:#F7FAF8}
+    .place-grid figcaption{min-height:76px}
     .place-main{margin-top:22px}
     .place-main figcaption b{display:block;color:var(--green);font-size:15px;margin-bottom:3px}
 .location-info{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,32px);align-items:start}
@@ -277,12 +278,24 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 
 .eng-diagram{background:#fff;border:1px solid var(--grey-line);border-radius:var(--radius);padding:clamp(14px,2vw,22px);box-shadow:var(--shadow)}
 .eng-diagram svg{width:100%;height:auto;border-radius:16px}
-.eng-photos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.eng-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
 .eng-photos .photoframe img{aspect-ratio:4/3;object-fit:cover}
-.eng-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
-.eng-fact{background:#fff;border:1px solid var(--grey-line);border-radius:16px;padding:15px 16px}
-.eng-fact b{display:block;font-size:16px;color:var(--green);line-height:1.2;margin-bottom:3px}
-.eng-fact span{font-size:12.5px;color:var(--muted);line-height:1.4}
+.eng-banners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.eng-banner{border-radius:22px;padding:clamp(20px,2.4vw,28px);border:1px solid transparent;overflow:hidden}
+.eng-banner h3{font-size:clamp(19px,1.9vw,24px);line-height:1.2;letter-spacing:-.01em;margin:0 0 10px}
+.eng-banner p{font-size:14.5px;line-height:1.5;margin:0 0 18px}
+.eng-banner ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.eng-banner li b{display:block;font-size:14.5px;line-height:1.25;margin-bottom:3px}
+.eng-banner li span{display:block;font-size:12.5px;line-height:1.4}
+.eng-banner--power{background:linear-gradient(135deg,#2F6B45,#36761D);border-color:#24512F;color:#fff}
+.eng-banner--power h3{color:var(--lime)}
+.eng-banner--power li b{color:#fff}
+.eng-banner--power li span{color:rgba(255,255,255,.85)}
+.eng-banner--power li::before{content:"";display:block;width:22px;height:3px;border-radius:3px;background:var(--lime);margin-bottom:8px}
+.eng-banner--systems{background:linear-gradient(135deg,#C4E9FA,#EAF5FC);border-color:#A6D4EE;color:var(--ink)}
+.eng-banner--systems h3{color:var(--green)}
+.eng-banner--systems li span{color:#31463A}
+.eng-banner--systems li::before{content:"";display:block;width:22px;height:3px;border-radius:3px;background:var(--green);margin-bottom:8px}
 .banner{margin-top:22px;background:var(--yellow);border:1px solid #E8C96A;border-radius:18px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .banner b{font-size:clamp(18px,2vw,23px);line-height:1.25;letter-spacing:-.01em}
 .banner span{font-size:13px;font-weight:700;color:#5a4700}
@@ -306,13 +319,17 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 .outcome-note{font-size:12px;color:#B8D1C6;margin-top:8px;line-height:1.45}
 .upside-note{margin-top:18px;background:rgba(255,255,255,.75);border:1px solid rgba(20,38,28,.12);border-radius:18px;padding:18px 22px;font-size:13.5px;line-height:1.55;color:#14382b}
 .upside-note b{color:#0b2b20}
+.upside-key{margin-top:clamp(26px,3.4vw,40px);position:relative;overflow:hidden;border-radius:26px;border:1px solid #0F1D16;background:linear-gradient(135deg,#14261C 0%,#2F6B45 62%,#36761D 100%);box-shadow:0 22px 60px rgba(6,45,34,.28);padding:clamp(26px,3.4vw,46px)}
+.upside-key::before{content:"Ключевой тезис";position:absolute;top:0;right:0;background:var(--lime);color:#14261C;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:9px 18px;border-radius:0 0 0 20px}
+.upside-key__title{margin:0 0 14px;font-size:clamp(26px,3.2vw,42px);line-height:1.1;letter-spacing:-.025em;font-weight:800;color:#fff}
+.upside-key__text{margin:0;max-width:78ch;font-size:clamp(15px,1.45vw,20px);line-height:1.5;color:rgba(255,255,255,.9)}
+.upside-key__text b{color:var(--lime)}
 
-.process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.process .card{border-top:4px solid var(--green);padding-top:24px}
-.process .num-chip{width:34px;height:34px;border-radius:10px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:12px;font-weight:800;margin-bottom:12px}
-.process h3{font-size:17px;color:var(--green);margin-bottom:6px}
-.process p{font-size:14px;line-height:1.55}
-.process .date-red{color:var(--red);font-weight:800}
+.law-banner{position:relative;overflow:hidden;border-radius:26px;border:1px solid var(--grey-line);background:linear-gradient(135deg,#FFFFFF 0%,#EFF8FD 55%,#DCF1FA 100%);box-shadow:0 18px 54px rgba(20,38,28,.10);padding:clamp(26px,3.4vw,48px)}
+.law-banner::after{content:"127-ФЗ";position:absolute;right:-10px;bottom:-.24em;font-size:clamp(80px,11vw,170px);font-weight:800;letter-spacing:-.05em;line-height:1;color:rgba(54,118,29,.08);pointer-events:none}
+.law-banner__badge{display:inline-block;background:var(--green);color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:18px}
+.law-banner__title{margin:0 0 12px;max-width:30ch;font-size:clamp(24px,3vw,40px);line-height:1.12;letter-spacing:-.02em;font-weight:800;color:#0F1D16}
+.law-banner__text{margin:0;max-width:62ch;font-size:clamp(16px,1.7vw,23px);line-height:1.45;font-weight:500;color:#14261C}
 .tax{margin-top:22px;background:#fff;border:1px solid var(--grey-line);border-radius:var(--radius);padding:clamp(22px,2.8vw,32px);box-shadow:var(--shadow)}
 .tax h3{font-size:18px;color:var(--green);margin-bottom:10px}
 .tax p{font-size:14px;line-height:1.6}
@@ -384,11 +401,12 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .hero__art{max-width:660px;width:100%;margin:4px auto 0}
   .split,.map-split,.land-grid,.location-info{grid-template-columns:1fr}
   .place-grid{grid-template-columns:1fr}
+  .place-grid figcaption{min-height:0}
   .mapcard{max-width:100%}
   .metric-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
   .scenarios{grid-template-columns:1fr}
   .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .eng-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .eng-banners{grid-template-columns:repeat(2,minmax(0,1fr))}
   .eng-photos{grid-template-columns:repeat(2,minmax(0,1fr))}
   .floor,.asset-extra{grid-template-columns:1fr}
   .floor--flip .floor__art{order:0}
@@ -396,7 +414,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .flow__join{flex-direction:row;padding:4px 0}
   .flow__join svg{transform:rotate(90deg);width:44px;height:44px}
   .flow__outcome{max-width:560px}
-  .process{grid-template-columns:1fr}
   .contact__grid{grid-template-columns:1fr}
 }
 @media (max-width:900px){
@@ -416,7 +433,10 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .kpis,.rent-strip{grid-template-columns:1fr}
   .reason-grid{grid-template-columns:1fr}
   .reserve-row{grid-template-columns:1fr}
-  .eng-facts{grid-template-columns:1fr}
+  .eng-banners{grid-template-columns:1fr}
+  .eng-banner ul{grid-template-columns:1fr}
+  .upside-key::before{position:static;display:inline-block;border-radius:14px;margin-bottom:12px}
+  .law-banner::after{display:none}
   .eng-photos{grid-template-columns:1fr}
   .photogallery__row{grid-template-columns:1fr}
   .hero__actions .btn{flex:1 1 auto}
@@ -455,6 +475,13 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   .sec--upside .flow__outcome{background:#fff !important;color:var(--ink) !important;border:1px solid #bbb}
   .flow__outcome .outcome-cap{color:var(--green) !important}
   .sec--upside .eyebrow,.sec--upside h2{color:var(--ink) !important}
+  .law-banner{background:#fff !important;border-color:#b9c4be !important;box-shadow:none !important}
+  .law-banner::after{color:rgba(54,118,29,.12) !important}
+  .upside-key{background:#F4FAFD !important;border:1px solid #b9c4be !important;box-shadow:none !important;color:var(--ink) !important}
+  .upside-key::before{background:var(--lime) !important;color:#14261C !important}
+  .upside-key__title{color:var(--green) !important}
+  .upside-key__text{color:var(--ink) !important}
+  .upside-key__text b{color:var(--green) !important}
   .flow__join svg{display:none}
   .contact{background:#fff !important;color:var(--ink) !important;padding:18px 0 !important}
   .contact::before{display:none}
@@ -475,7 +502,6 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   h3{font-size:12pt}
   .reason-grid{grid-template-columns:1fr 1fr}
   .place-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:10px !important}
-  .process{grid-template-columns:repeat(3,1fr) !important}
   .contact__grid{grid-template-columns:1fr 1fr !important}
 }
 
@@ -494,19 +520,17 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
   h2{font-size:16pt !important;line-height:1.08 !important}
   h3{font-size:11.5pt !important}
   p,li,dt,dd,td,th{font-size:9.3pt !important}
-  .split,.map-split,.land-grid,.asset-extra,.floor,.flow,.scenarios,.process,.contact__grid,.summary-left,.location-info,.reason-grid,.eng-facts,.kpis,.rent-strip,.metric-strip,.scenario dl,.flow__levers,.contact-list,.snapshot,.monetise,.fact-list,.bullets,.tax,.owner{display:block !important;grid-template-columns:none !important;gap:0 !important}
+  .split,.map-split,.land-grid,.asset-extra,.floor,.flow,.scenarios,.contact__grid,.summary-left,.location-info,.reason-grid,.eng-banners,.kpis,.rent-strip,.metric-strip,.scenario dl,.flow__levers,.contact-list,.snapshot,.monetise,.fact-list,.bullets,.tax,.owner{display:block !important;grid-template-columns:none !important;gap:0 !important}
   .summary-left,.location-info,.floor__facts,.land-card--copy,.flow__outcome,.tax,.contact-list{margin-top:10px !important}
-  .mapcard,.planframe,.land-card,.chart-card,.card,.scenario,.finding,.tgmk,.tax,.banner,.reason,.kpi,.rent,.eng-fact,.lever,.flow__outcome,.table-wrap,.contact-item,.snapshot div,.process .card,.chart-scroll,.chart-caption,.fact-list li,.bullets li,.monetise li{break-inside:avoid !important;page-break-inside:avoid !important}
+  .mapcard,.planframe,.land-card,.chart-card,.card,.scenario,.finding,.tgmk,.tax,.banner,.reason,.kpi,.rent,.eng-banner,.lever,.flow__outcome,.table-wrap,.contact-item,.snapshot div,.chart-scroll,.chart-caption,.fact-list li,.bullets li,.monetise li{break-inside:avoid !important;page-break-inside:avoid !important}
   figure,svg{break-inside:avoid !important;page-break-inside:avoid !important;max-width:100% !important}
-  .mapcard,.planframe,.land-card,.chart-card,.card,.scenario,.finding,.tgmk,.tax,.banner,.reason,.kpi,.rent,.eng-fact,.lever,.flow__outcome,.snapshot div{border-color:#b9c4be !important;box-shadow:none !important;background:#fff !important}
+  .mapcard,.planframe,.land-card,.chart-card,.card,.scenario,.finding,.tgmk,.tax,.banner,.reason,.kpi,.rent,.lever,.flow__outcome,.snapshot div{border-color:#b9c4be !important;box-shadow:none !important;background:#fff !important}
   .finding,.banner{background:#FEF2CB !important}
   .metric{display:inline-block !important;width:19% !important;vertical-align:top !important;margin:0 1% 6px 0 !important;padding:8px !important}
   .kpi{display:inline-block !important;width:48.5% !important;vertical-align:top !important;margin:0 1% 8px 0 !important;padding:10px !important}
   .rent{display:inline-block !important;width:32% !important;vertical-align:top !important;margin:0 1% 8px 0 !important;padding:10px !important}
-  .eng-fact{display:inline-block !important;width:48.5% !important;vertical-align:top !important;margin:0 1% 8px 0 !important;padding:10px !important}
   .snapshot div{display:inline-block !important;width:32% !important;vertical-align:top !important;margin:0 1% 8px 0 !important;padding:9px !important}
   .reason{display:inline-block !important;width:48.5% !important;vertical-align:top !important;margin:0 1% 8px 0 !important;padding:10px !important}
-  .process .card{display:inline-block !important;width:32% !important;vertical-align:top !important;margin:0 1% 8px 0 !important;padding:10px !important}
   .scenario{margin-bottom:8px !important}
   .scenario dl{display:grid !important;grid-template-columns:minmax(0,1fr) auto !important;gap:6px 12px !important}
   .scenario dt,.scenario dd{padding-bottom:6px !important}
@@ -797,13 +821,12 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="shell">
 <div class="sec-head reveal">
 <div class="eyebrow">Актив, этаж за этажом</div>
-<h2>4-этажный ТЦ, капитальный склад и 1,58 га земли.</h2>
-<p>У каждого уровня своя роль в составе арендаторов. </p>
+<h2>4-этажный ТЦ, капитальный склад и земля 1,58 га .</h2>
 </div>
 <div class="floor">
 <div class="floor__art">
 <figure class="planframe reveal">
-<img alt="Фасад ТЦ «Арбуз» с улицы: четырёхэтажный торговый центр с входными группами, парковкой и пешеходными переходами." src="assets/face-building-2.png">
+<img alt="Фасад ТЦ «Арбуз» с улицы: четырёхэтажный торговый центр, входные группы и парковка перед зданием." src="assets/face-building-1.jpg">
 </figure>
 <figure class="planframe reveal">
 <img alt="План 1 этажа: якорный супермаркет «Самбери», OZON, «Золотая Русь», салоны связи, аптека и фуд-корт." src="assets/floor-1.jpg">
@@ -816,7 +839,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <li>Площадь  <b>~2 900 кв.м</b></li>
 <li>Якорный арендатор <b>Самбери · 1 900 кв.м</b></li>
 <li>Салоны связи <b>МТС · МегаФон · Теле2</b></li>
-<li>OZON, ювелирный «Золотая Русь», аптека</li>
+<li>OZON, ювелирный «Золотая Русь», аптека, цветы, подарки</li>
 </ul>
 </div>
 </div>
@@ -825,13 +848,19 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <figure class="planframe reveal">
 <img alt="План 2 этажа: открытая галерея и отдельные торговые ячейки." src="assets/floor-2.jpg">
 </figure>
+<figure class="planframe reveal">
+<img alt="Травалатор между этажами в ТЦ «Арбуз»: открытая торговая галерея второго этажа." src="assets/travalator-1.jpg">
+</figure>
 </div>
 <div class="floor__facts reveal">
 <div class="floor__meta">Этаж 2 · открытая планировка</div>
-<h3>Мода </h3>
-<p>Открытая галерея даёт каждой ячейке витрину на главном маршруте. Развлекательный блок добавляет вечерние и выходные визиты, а ювелирные изделия и товары для дома расширяют предложение за пределы моды.</p>
+<h3>Мода и промтовары.</h3>
+<p>Единая торговая галерея, объединяющая магазины одежды, обуви и товары для дома. </p>
 <ul class="fact-list">
-<li>Торговля вокруг <b>открытой галереи</b></li>
+<li>Торговля в <b>открытой галереи</b></li>
+<li>Удобная закольцованная навигация </li>
+<li>Широкие светлые коридоры. </li>
+<li>Общественные санузлы. </li>
 <li>Эскалаторы </li>
 </ul>
 </div>
@@ -848,15 +877,16 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="floor__facts reveal">
 <div class="floor__meta">Этажи 3–4</div>
 <h3>Торговля, офисы </h3>
-<p>Верхние этажи объединяют целевую торговлю с офисным. Банкетный зал на 4 этаже и Кафе «Малина» ,которое работает в разных форматах.</p>
+<p>  3-й этаж: Федеральный гипермаркет обуви <b>KARI </b>557,2 кв.м, Большое крыло (1899 кв.м.) формата Open Space. 4-й этаж:  Кафе «Малина» с банкетным залом, которое работает в разных форматах. Офисные помещения с автономным доступом.</p>
 <ul class="fact-list">
-<li>Этаж 3 — торговля и кафе, <b>KARI 557,2 кв.м</b></li>
-<li>Этаж 4 — офисы <b>1 899 кв.м</b></li>
-<li> «Кафе Малина» ,банкетный зал,</li>
-<li>Выход на открытую террасу </li>
+<li>Этаж 3 — торговля  </li>
+<li>Этаж 4 — офисы, есть выход на открытую террасу</li>
 </ul>
 <figure class="photoframe reveal" style="margin-top:16px">
 <img alt="Кафе «Малина» на 4 этаже: банкетный зал с мягкой мебелью, сценой и праздничным оформлением." src="assets/floor-3-cafe.jpg">
+</figure>
+<figure class="photoframe reveal" style="margin-top:16px">
+<img alt="Офисные помещения на 4 этаже ТЦ «Арбуз»: открытое рабочее пространство с панорамным остеклением." src="assets/office-4.png">
 </figure>
 </div>
 </div>
@@ -885,12 +915,12 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="shell">
 <div class="sec-head reveal">
 <div class="eyebrow">Локация и региональные драйверы</div>
-<h2>Центр города, 10 км до глубоководного порта.</h2>
-<p>Советская Гавань — административный центр Советско-Гаванского района. Город является восточной конечной станцией Байкало-Амурской магистрали и опорным пунктом Северного морского пути.</p>
+<h2>Центр города</h2>
+<p>Советская Гавань — административный центр Советско-Гаванского района.</p>
 </div>
 <div class="map-split">
 <figure class="photoframe reveal place-main">
-<img alt="Карта Яндекса: расположение ТЦ «Арбуз» на улице Пушкина в Советской Гавани — рядом школа, детский сад, сток-центр и Аэрофлот." src="assets/diagram3.png">
+<img alt="Карта Яндекса: расположение ТЦ «Арбуз» на улице Пушкина в Советской Гавани — рядом школа, детский сад, сток-центр и Аэрофлот." src="assets/place-2.png">
 <figcaption><b>Адрес: Улица Пушкина, 1, Советская Гавань, Хабаровский край</b></figcaption>
 </figure>
 <div class="place-grid">
@@ -904,22 +934,16 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 </figure>
 <figure class="photoframe reveal">
 <img alt="Карта Яндекса: участок с фронтом по улице Пушкина — резерв развития." src="assets/place-red.jpg">
-<figcaption><b>2 809 кв.м</b>Резерв развития</figcaption>
+<figcaption><b>2 809 кв.м</b>Резерв развития: капитализация через новую застройку или сдача площадей в аренду.</figcaption>
 </figure>
-</div>
-<div class="upside-note reveal" style="margin-top:18px">
-<b>Upside-потенциал:</b> капитализация через новую застройку (Street-retail, Drive-thru, профильный маркет) или сдача площадей в аренду.
 </div>
 <div class="location-info reveal">
 <ul class="bullets">
-<li>Единственный крупный ТЦ, обслуживающий два района, — <b>56 433 жителя зоны охвата</b>.</li>
-<li>Восточная конечная станция <b>Байкало-Амурской магистрали</b>.</li>
-<li>Грузовая инфраструктура, связывающая с Комсомольском-на-Амуре и остальной Россией.</li>
 <li>Современная ТЭЦ, обеспечивающая транспортный узел.</li>
 <li>Портовая и логистическая зона с новыми угольными и контейнерными терминалами, судоремонтными центрами и рыбопереработкой.</li>
 </ul>
 <div class="tgmk">
-<span class="tag tag--plan">Планируется</span>
+<span class="tag tag--plan">Новые планы развития региона</span>
 <p>«Полиметалл» вернулся к предпроектной проработке Тихоокеанского гидрометаллургического комбината (ТГМК) в Советской Гавани после паузы 2022 года. В июне 2026 года компания, правительство Хабаровского края и «Росводоканал» подписали трёхстороннее соглашение о современных очистных сооружениях (3 500 м³/сут, первый этап — к 2031 году). Плановая мощность — 250–300 тыс. тонн стороннего золотого концентрата в год; ранее проект оценивался в 60 млрд ₽</p>
 </div>
 </div>
@@ -931,7 +955,7 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="sec-head reveal">
 <div class="eyebrow">Инженерия и автономность</div>
 <h2>100% инженерная автономность. Без CAPEX-рисков 15 лет.</h2>
-<p>Собственная линия 10 кВ, собственная подстанция, собственный тепловой пункт и дизель-генератор 300 кВт с автозапуском. Здание рассчитано на продолжение торговли при отключении сети.</p>
+<p></p>
 </div>
 <div class="eng-photos">
 <figure class="photoframe reveal">
@@ -951,19 +975,27 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <figcaption>Вентиляция с рекуперацией тепла.</figcaption>
 </figure>
 </div>
-<div class="eng-facts">
-<div class="eng-fact reveal"><b>Сейсмика 9 баллов</b><span>Проект «Дальгипротранс», скальное основание</span></div>
-<div class="eng-fact reveal"><b>Собственная ЛЭП 10 кВ</b><span>Выделенная линия и своя подстанция</span></div>
-<div class="eng-fact reveal"><b>Дизель 300 кВт</b><span>Автозапуск, резервное питание</span></div>
-<div class="eng-fact reveal"><b>4 лифта</b><span>Эскалаторы, грузовые лифты, туфоблок</span></div>
-<div class="eng-fact reveal"><b>Рекуперация тепла</b><span>Многозонная вентиляция</span></div>
-<div class="eng-fact reveal"><b>Индивидуальный тепловой пункт</b><span>Узел учёта</span></div>
-<div class="eng-fact reveal"><b>Без CAPEX-рисков</b><span>Ближайшие 15 лет</span></div>
-<div class="eng-fact reveal"><b>Один собственник</b><span>Капитал арендаторов не требуется</span></div>
+<div class="eng-banners">
+<div class="eng-banner eng-banner--power reveal">
+<h3>Энергетика и электроснабжение</h3>
+<p>Собственная линия 10 кВ, собственная подстанция и дизель-генератор 300 кВт с автозапуском. Торговый центр продолжает работу при отключении сети и не зависит от внешних поставщиков мощности.</p>
+<ul>
+<li><b>Сейсмика 9 баллов</b><span>Проект «Дальгипротранс», скальное основание</span></li>
+<li><b>Собственная ЛЭП 10 кВ</b><span>Выделенная линия и своя подстанция</span></li>
+<li><b>Дизель 300 кВт</b><span>Автозапуск, резервное питание</span></li>
+<li><b>Станция пожаротушения</b><span></span></li>
+</ul>
 </div>
-<div class="banner reveal">
-<b>100% инженерная автономность — без капитальных вложений 15 лет.</b>
-<span>Дальгипротранс · сейсмика 9 баллов· скальное основание</span>
+<div class="eng-banner eng-banner--systems reveal">
+<h3>Инженерные системы здания</h3>
+<p>Тепловой пункт, вентиляция с рекуперацией тепла, лифты и эскалаторы — всё обслуживается внутри комплекса, без аварийных остановок и без плановых вложений в ближайшие 15 лет.</p>
+<ul>
+<li><b>4 лифта</b><span>Эскалаторы, грузовые лифты, туфоблок</span></li>
+<li><b>Рекуперация тепла</b><span>Многозонная вентиляция</span></li>
+<li><b>ИТП</b><span>Индивидуальный тепловой пункт, узел учёта</span></li>
+<li><b>Многоконтурная вентиляция</b><span></span></li>
+</ul>
+</div>
 </div>
 </div>
 </section>
@@ -1004,37 +1036,25 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="eyebrow">Один результат</div>
 <div class="outcome-big"><small>NOI · ₽ в год</small>23,1 → 27,5 млн</div>
 <div class="outcome-cap">CAP 6,27% → 7,46%</div>
-<p class="outcome-note">Сценарий меморандума даёт +19,1% NOI. Маржа 55–65% остаётся более крупным призом.</p>
+<p class="outcome-note">Сценарий оптимизации даёт +19,1% NOI. Маржа 55–65% остаётся более крупным призом.</p>
 </aside>
 </div>
-<div class="upside-note reveal"style="font-size: 20px;">
- Все пять рычагов — действия собственника. Текущие финансовые показатели Комплекса сформированы «в исходном состоянии» без проведения коммерческой оптимизации. Это создает для нового собственника колоссальный резерв для роста
+<div class="upside-key reveal">
+<p class="upside-key__title">Все пять рычагов — действия собственника.</p>
+<p class="upside-key__text">Текущие финансовые показатели Комплекса сформированы «в исходном состоянии» без проведения коммерческой оптимизации. Это создает для нового собственника колоссальный резерв для роста</p>
 </div>
 </div>
 </section>
 <section class="sec sec--white" id="process">
 <div class="shell">
 <div class="sec-head reveal">
-<div class="eyebrow">Процесс, юридика, налоги</div>
-<h2>Раздел доверия.</h2>
-<p>Публичные торги по 127-ФЗ.</p>
+<div class="eyebrow">Юридическая аннотация</div>
+<h2></h2>
 </div>
-<div class="process">
-<article class="card reveal">
-<div class="num-chip">01</div>
-<h3>Юридическая чистота гарантирована</h3>
-<p>По Федеральному закону № 127-ФЗ о несостоятельности налоговые долги продавца, залоги, аресты и обременения прекращаются при покупке, а цена защищена от оспаривания.</p>
-</article>
-<article class="card reveal">
-<div class="num-chip">02</div>
-<h3>Необходимость в NDA при покупке комплекса на МЭТС</h3>
-<p>Необходимость есть, если вы серьезно рассматриваете этот объект для приобретения и хотите провести глубокий финансовый и юридический аудит (Due Diligence)</p>
-</article>
-<article class="card reveal">
-<div class="num-chip">03</div>
-<h3>Срок подачи заявок</h3>
-<p>Заявки принимаются до <span class="date-red">25 ноября 2026</span>.</p>
-</article>
+<div class="law-banner reveal">
+<span class="law-banner__badge">127-ФЗ · Публичные торги</span>
+<p class="law-banner__title">Юридическая чистота гарантирована</p>
+<p class="law-banner__text">По Федеральному закону № 127-ФЗ о несостоятельности налоговые долги продавца, залоги, аресты и обременения прекращаются при покупке, а цена защищена от оспаривания.</p>
 </div>
 </div>
 </section>
@@ -1043,8 +1063,8 @@ tr.is-subject td{background:var(--mint);font-weight:800;color:var(--green);borde
 <div class="deck-head">
 <div class="sec-head reveal" style="margin-bottom:0;max-width:620px">
 <div class="eyebrow">Презентация</div>
-<h2>Инвесторская презентация на 15 слайдов.</h2>
-<p>Презентация к меморандуму. Смотрите здесь или откройте PDF.</p>
+<h2>Презентация для инвестора на 15 слайдов.</h2>
+<p>Смотрите здесь или откройте PDF.</p>
 </div>
 <div class="deck-actions">
 <a class="btn btn--light" href="assets/presentation-arbuz-sovetskaya-gavan.pdf" rel="noopener" target="_blank">
