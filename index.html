@@ -25,7 +25,7 @@
   --gold:#FED966;
   --peach:#FCE5CD;
   --cream:#E8E1D4;
-  --grey-bg:#E7F0F5;
+  --grey-bg:#D8EAF6;
   --grey-line:#CBD5CC;
   --red:#C62828;
   --muted:#14261C;
@@ -42,7 +42,7 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:#F4FAFD;color:var(--ink);
+  margin:0;background:#DCEFFF;color:var(--ink);
   font-family:Manrope,"Segoe UI",system-ui,-apple-system,sans-serif;
   font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;overflow-x:hidden;
@@ -70,9 +70,9 @@ b,strong{font-weight:800}
 
 .shell{width:100%;max-width:var(--shell);margin:0 auto;padding-left:var(--gutter);padding-right:calc(var(--gutter) + var(--rail))}
 .sec{position:relative;padding:clamp(64px,7vw,104px) 0}
-.sec--mint{background:linear-gradient(180deg,#E7F6FB 0%,#F9FCFE 100%)}
+.sec--mint{background:linear-gradient(180deg,#D6ECFF 0%,#EAF6FF 100%)}
 .sec--grey{background:var(--grey-bg)}
-.sec--white{background:#FAFCFE}
+.sec--white{background:#E4F3FF}
 .sec--upside{background:linear-gradient(135deg,#19DAEC 0%,#57E4F1 55%,#C4E9FA 100%);color:#0b2b20}
 .sec--deck{background:linear-gradient(160deg,#2F4F41 0%,#395F4F 44%,#14261C 100%);color:#fff}
 .sec--deck h2,.sec--deck h3{color:#fff}
@@ -125,7 +125,7 @@ b,strong{font-weight:800}
 .lang-switch a.is-active{color:var(--green)}
 .lang-switch .sep{color:var(--muted)}
 
-.hero{position:relative;padding:calc(64px + clamp(34px,4.4vw,64px)) 0 clamp(34px,4vw,48px);background:radial-gradient(1100px 620px at 88% -6%,rgba(144,202,245,.58),transparent 62%),linear-gradient(180deg,#DFF3FC 0%,#E9F7FC 44%,#FAFCFE 100%);overflow:hidden}
+.hero{position:relative;padding:calc(64px + clamp(34px,4.4vw,64px)) 0 clamp(34px,4vw,48px);background:radial-gradient(1100px 620px at 88% -6%,rgba(144,202,245,.58),transparent 62%),linear-gradient(180deg,#CDE8FF 0%,#DCEFFF 55%,#DCEFFF 100%);overflow:hidden}
 .hero .shell{position:relative;z-index:1}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,3.4vw,44px);align-items:center}
 .hero h1{margin:0 0 15px}
@@ -133,7 +133,7 @@ b,strong{font-weight:800}
 .mark::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.02em;height:.18em;background:var(--lime);opacity:.34;border-radius:99px;z-index:-1}
 .hero .lede{margin-bottom:18px;font-size:clamp(16px,1.3vw,18px)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.lot{margin-top:19px;padding:17px 20px 18px;border-radius:20px;background:linear-gradient(145deg,rgba(255,248,231,.97),rgba(242,249,236,.97));border:1px solid #E3D5AC;box-shadow:0 12px 32px rgba(20,38,28,.07)}
+.lot{margin-top:19px;padding:17px 20px 18px;border-radius:20px;background:linear-gradient(145deg,rgba(234,246,255,.97),rgba(214,236,255,.97));border:1px solid #B9D9F2;box-shadow:0 12px 32px rgba(20,38,28,.07)}
 .lot__cap{font-size:12.5px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--green)}
 .lot__list{margin-top:8px;display:grid;gap:5px}
 .lot__list li{display:flex;justify-content:space-between;gap:14px;font-size:17.5px;padding-bottom:5px;border-bottom:1px dashed rgba(20,38,28,.14)}
