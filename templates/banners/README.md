@@ -7,14 +7,14 @@
 
 | № | Размер | PNG | Вес | JPG | Вес | HTML-сниппет |
 |---|--------|-----|-----|-----|-----|--------------|
-| 1 | 600×200 | `banner-1-40procent-600x200.png` | 134.5 КБ | `banner-1-40procent-600x200.jpg` | 35.1 КБ | `banner-1-40procent-600x200.html` |
-| 1 | 300×250 | `banner-1-40procent-300x250.png` | 90.7 КБ | `banner-1-40procent-300x250.jpg` | 24.4 КБ | `banner-1-40procent-300x250.html` |
-| 2 | 600×200 | `banner-2-aucione-368-600x200.png` | 131.4 КБ | `banner-2-aucione-368-600x200.jpg` | 30.7 КБ | `banner-2-aucione-368-600x200.html` |
-| 2 | 300×250 | `banner-2-aucione-368-300x250.png` | 86.6 КБ | `banner-2-aucione-368-300x250.jpg` | 20.0 КБ | `banner-2-aucione-368-300x250.html` |
-| 3 | 600×200 | `banner-3-sdano-95-600x200.png` | 134.4 КБ | `banner-3-sdano-95-600x200.jpg` | 30.6 КБ | `banner-3-sdano-95-600x200.html` |
-| 3 | 300×250 | `banner-3-sdano-95-300x250.png` | 81.5 КБ | `banner-3-sdano-95-300x250.jpg` | 19.1 КБ | `banner-3-sdano-95-300x250.html` |
-| 4 | 600×200 | `banner-4-skidka-30-600x200.png` | 143.5 КБ | `banner-4-skidka-30-600x200.jpg` | 35.4 КБ | `banner-4-skidka-30-600x200.html` |
-| 4 | 300×250 | `banner-4-skidka-30-300x250.png` | 91.1 КБ | `banner-4-skidka-30-300x250.jpg` | 22.8 КБ | `banner-4-skidka-30-300x250.html` |
+| 1 | 600×200 | `banner-1-40procent-600x200.png` | 134.5 КБ | `banner-1-40procent-600x200.jpg` | 35.4 КБ | `banner-1-40procent-600x200.html` |
+| 1 | 300×250 | `banner-1-40procent-300x250.png` | 90.7 КБ | `banner-1-40procent-300x250.jpg` | 24.9 КБ | `banner-1-40procent-300x250.html` |
+| 2 | 600×200 | `banner-2-aucione-368-600x200.png` | 136.4 КБ | `banner-2-aucione-368-600x200.jpg` | 31.2 КБ | `banner-2-aucione-368-600x200.html` |
+| 2 | 300×250 | `banner-2-aucione-368-300x250.png` | 82.3 КБ | `banner-2-aucione-368-300x250.jpg` | 18.7 КБ | `banner-2-aucione-368-300x250.html` |
+| 3 | 600×200 | `banner-3-sdano-95-600x200.png` | 120.7 КБ | `banner-3-sdano-95-600x200.jpg` | 26.9 КБ | `banner-3-sdano-95-600x200.html` |
+| 3 | 300×250 | `banner-3-sdano-95-300x250.png` | 76.4 КБ | `banner-3-sdano-95-300x250.jpg` | 17.6 КБ | `banner-3-sdano-95-300x250.html` |
+| 4 | 600×200 | `banner-4-skidka-30-600x200.png` | 138.7 КБ | `banner-4-skidka-30-600x200.jpg` | 35.4 КБ | `banner-4-skidka-30-600x200.html` |
+| 4 | 300×250 | `banner-4-skidka-30-300x250.png` | 86.6 КБ | `banner-4-skidka-30-300x250.jpg` | 22.6 КБ | `banner-4-skidka-30-300x250.html` |
 
 ## Варианты и офферы
 
@@ -23,7 +23,7 @@
 2. **`banner-2-aucione-368`** — «Пороговая цена аукциона 368,4 млн ₽»
    Фото: капитальный склад. Подзаголовок: 28 293 ₽ за м² · NOI 33,2 млн ₽ в год · окупаемость от 9 лет.
 3. **`banner-3-sdano-95`** — «95,5% площадей уже сдано в аренду»
-   Фото: вид комплекса сверху. Подзаголовок: 13 020 м² на красной линии · 57 000 жителей в зоне охвата.
+   Фото: интерьер ТЦ — эскалатор и открытые магазины. Подзаголовок: 13 020 м² на красной линии · 57 000 жителей в зоне охвата.
 4. **`banner-4-skidka-30`** — «−30% к независимой оценке 2025 года»
    Фото: здание ТЦ «Арбуз». Подзаголовок: капитальные стены и 1,58 га земли в собственности.
 
